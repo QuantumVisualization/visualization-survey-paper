@@ -1,0 +1,38 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.1]
+		\begin{scope}
+			\node[draw, circle, fill=red!30, minimum size=1cm, line width=1.5pt] (z) at (0,0) {\textbf{Z}};
+			\draw[thick] (z) -- ++(0,1) node[above] {};
+			\draw[thick] (z) -- ++(0,-1) node[below] {};
+
+			\node[below=1.2cm] at (0,0) {\textbf{Z spider}};
+			\node[draw, rounded corners, fill=gray!10, text width=3cm, align=center, below=2.0cm] at (0,0) {
+				Computational basis\\
+				$|0\rangle$, $|1\rangle$
+			};
+		\end{scope}
+
+		\node at (4,0) {\textbf{vs}};
+
+		\begin{scope}[xshift=8cm]
+			\node[draw, circle, fill=purple!40, minimum size=1cm, line width=1.5pt] (w) at (0,0) {\textbf{W}};
+			\draw[thick] (w) -- ++(0,1) node[above] {};
+			\draw[thick] (w) -- ++(0.8,0.6);
+			\draw[thick] (w) -- ++(-0.8,0.6);
+			\draw[thick] (w) -- ++(0,-1) node[below] {};
+
+			\node[below=1.2cm] at (0,0) {\textbf{W spider}};
+			\node[draw, rounded corners, fill=gray!10, text width=3cm, align=center, below=2.0cm] at (0,0) {
+				Multipartite basis\\
+				$|W_N\rangle$ states
+			};
+		\end{scope}
+
+		\node[draw, rounded corners, fill=yellow!20, text width=12cm, align=center, below=2cm] at (4,-2) {
+			\textbf{Z vs W in ZW calculus}: Z spiders (red) represent the computational basis $|0\rangle$, $|1\rangle$ and are associated with classical bits. W spiders (purple) represent the fundamental multipartite entanglement resource $|W_N\rangle$. Together, they form a complete basis for all multipartite quantum states.
+		};
+	\end{tikzpicture}
+	\caption{Comparison of Z and W spiders in the ZW calculus. Z spiders encode classical bits in the computational basis, while W spiders provide the primitive for genuine multipartite entanglement. This dual representation enables complete characterization of quantum states.}
+	\label{fig:zw-z-vs-w}
+\end{figure}

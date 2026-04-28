@@ -1,0 +1,46 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.4]
+		\begin{scope}
+			\node[draw, ellipse, dashed, thick, fill=blue!10, minimum width=2.4cm, minimum height=1.4cm] (h2) at (0,0) {};
+			\node[draw, circle, fill=blue!30, minimum size=0.8cm] (v1) at (-0.5,0.0) {1};
+			\node[draw, circle, fill=blue!30, minimum size=0.8cm] (v2) at (0.5,0.0) {2};
+			\node[below=1.9cm] at (0,0) {\large\textbf{2-hyperedge}};
+		\end{scope}
+
+		\begin{scope}[xshift=4cm]
+			\node[draw, ellipse, dashed, thick, fill=red!10, minimum width=2.6cm, minimum height=2.1cm] (h3) at (0,0) {};
+			\node[draw, circle, fill=blue!30, minimum size=0.8cm] (w1) at (-0.5,-0.1) {1};
+			\node[draw, circle, fill=blue!30, minimum size=0.8cm] (w2) at (0,0.4) {2};
+			\node[draw, circle, fill=blue!30, minimum size=0.8cm] (w3) at (0.5,-0.1) {3};
+			\node[below=1.9cm] at (0,0) {\large\textbf{3-hyperedge}};
+		\end{scope}
+
+		\begin{scope}[xshift=8cm]
+			\node[draw, ellipse, dashed, thick, fill=green!10, minimum width=2.8cm, minimum height=3cm] (h4) at (0,0) {};
+			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (x1) at (-0.6,0.0) {1};
+			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (x2) at (0,0.5) {2};
+			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (x3) at (0.6,0.0) {3};
+			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (x4) at (0,-0.6) {4};
+			\node[below=1.9cm] at (0,0) {\large\textbf{4-hyperedge}};
+		\end{scope}
+
+		\begin{scope}[xshift=3cm, yshift=-4cm]
+			\node[draw, ellipse, dashed, thick, fill=purple!10, minimum width=5.5cm, minimum height=3.4cm] (hlattice) at (0,0) {};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y1) at (-1.2,0.5) {1};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y2) at (-0.4,0.5) {2};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y3) at (0.4,0.5) {3};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y4) at (1.2,0.5) {4};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y5) at (-0.8,-0.5) {5};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y6) at (0,-0.5) {6};
+			\node[draw, circle, fill=blue!30, minimum size=0.6cm] (y7) at (0.8,-0.5) {7};
+			\node[below=1.6cm] at (0,0) {\large\textbf{Lattice}};
+		\end{scope}
+
+		\node[draw, rounded corners, fill=yellow!20, text width=14cm, align=center, below=6.5cm] at (4.3,-2) {
+			\textbf{Lattice hypergraph}: hierarchical levels of hyperedges capture different types of multipartite correlations at different scales
+		};
+	\end{tikzpicture}
+	\caption{Lattice hypergraph structure showing hierarchical levels. Different hyperedge sizes (2, 3, 4, N) capture correlations at different scales. The full lattice hypergraph combines all levels for complete characterization of multipartite entanglement.}
+	\label{fig:lattice-hypergraph}
+\end{figure}

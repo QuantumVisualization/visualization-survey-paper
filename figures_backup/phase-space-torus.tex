@@ -1,0 +1,32 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=0.9]
+		\draw[thick] (0,0) ellipse (2.5cm and 1.5cm);
+		\draw[thick] (0,0) ellipse (1.5cm and 0.8cm);
+		\draw[thick, fill=blue!20, opacity=0.3] (0,0) circle (1cm);
+
+		\foreach \angle in {0,30,...,330} {
+		\draw[thick, red, -{Stealth[length=2mm]}] ({\angle}:0.6cm) -- ({\angle}:1.3cm);
+		}
+
+		\draw[thick, blue, -{Stealth[length=2mm]}] (0,0.3) -- (0,1.2);
+		\draw[thick, blue, -{Stealth[length=2mm]}] (0,-0.3) -- (0,-1.2);
+
+		\node[above] at (0,1.6) {$|q\rangle$ states};
+		\node[below] at (0,-1.6) {$|p\rangle$ states};
+		\node at (-2.7,0) {$R$};
+		\node at (0,0) {$0$};
+
+		\node[draw, rounded corners, fill=gray!20] at (5.5,0) {
+			\begin{minipage}{3cm}
+				\centering
+				\textbf{Phase Space}\\ \vspace{0.2cm}
+				$q$: position\\
+				$p$: momentum\\
+				$\hbar$: Planck constant
+			\end{minipage}
+		};
+	\end{tikzpicture}
+	\caption{Phase space representation for continuous-variable quantum systems. The torus structure arises from periodic boundary conditions in position ($q$) and momentum ($p$) spaces.}
+	\label{fig:phase-space-torus}
+\end{figure}

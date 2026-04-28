@@ -1,0 +1,24 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=0.95]
+		\begin{scope}
+			\foreach \x/\label in {0/00, 2/01, 4/10, 6/11} {
+				\node[draw, circle, minimum size=1.8cm, thick] (c\x) at (\x,0) {};
+			}
+			\foreach \x/\fill/\r in {0/blue!60/1.2, 2/blue!60/0.8, 4/green!60/1.0, 6/green!60/0.6} {
+				\node[draw, circle, fill=\fill, minimum size=\r cm, thick] at (\x,0) {};
+			}
+			\draw[-{Stealth[length=2mm]}, thick, red] (6,0) -- (7,0.7);
+			\node[below=0.1cm] at (0,-1.2) {$|00\rangle$};
+			\node[below=0.1cm] at (2,-1.2) {$|01\rangle$};
+			\node[below=0.1cm] at (4,-1.2) {$|10\rangle$};
+			\node[below=0.1cm] at (6,-1.2) {$|11\rangle$};
+		\end{scope}
+		
+		\draw[->] (0,-2.2) -- (2,-2.2) node[right] {Qubit 1 = $|i\rangle$};
+		\draw[->] (-0.5,-1.8) -- (-0.5,0.3) node[above] {Qubit 2 = $|j\rangle$};
+		
+	\end{tikzpicture}
+	\caption{Two-qubit state in Circle Representation. Circles are arranged in a $2 \times 2$ grid with basis state labels, showing relative amplitudes and phases for each $|ij\rangle$ state.}
+	\label{fig:circle-two-qubit}
+\end{figure}

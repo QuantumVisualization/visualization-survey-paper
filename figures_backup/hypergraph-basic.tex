@@ -1,0 +1,25 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=0.85]
+		\node[draw, circle, fill=blue!20, minimum size=0.7cm] (1) at (0,0) {1};
+		\node[draw, circle, fill=blue!20, minimum size=0.7cm] (2) at (2,0) {2};
+		\node[draw, circle, fill=blue!20, minimum size=0.7cm] (3) at (1,1.7) {3};
+		\draw[thick] (1) -- (2);
+		\draw[thick] (2) -- (3);
+		\draw[thick] (3) -- (1);
+		\node[below=0.5cm] at (1,0) {(a) Regular graph};
+
+		\node[draw, ellipse, dashed, thick, fill=red!10, minimum width=2cm, minimum height=2.3cm] (h) at (5,0.54) {};
+		\node[draw, circle, fill=blue!20, minimum size=0.7cm] (a) at (4.5,0) {1};
+		\node[draw, circle, fill=blue!20, minimum size=0.7cm] (b) at (5.5,0) {2};
+		\node[draw, circle, fill=blue!20, minimum size=0.7cm] (c) at (5,1.0) {3};
+		\node[below=0.5cm] at (5,0) {(b) Hypergraph};
+
+		\node[draw, rounded corners, fill=yellow!20, text width=5cm, align=center] at (12,0.5) {
+			\textbf{Hyperedge} connects $>2$ vertices\\[0.2cm]
+			Represents genuine multipartite correlations
+		};
+	\end{tikzpicture}
+	\caption{Comparison of regular graphs and hypergraphs. In (a), each edge connects exactly two vertices, representing pairwise correlations. In (b), the dashed ellipse represents a hyperedge connecting three vertices, capturing genuine tripartite entanglement.}
+	\label{fig:hypergraph-basic}
+\end{figure}
