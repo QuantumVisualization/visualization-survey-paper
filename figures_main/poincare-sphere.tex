@@ -1,0 +1,26 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}
+		\draw[thick, fill=blue!10] (0,0) circle (2cm);
+		\draw[thick, dashed] (0,0) circle (1.4cm);
+		\draw[thick] (0,-2) -- (0,2);
+		\draw[thick] (-2,0) -- (2,0);
+
+		\foreach \r/\col in {0.6/red, 1.0/green!60!black, 1.4/orange} {
+				\draw[\col, thick] (0,0) circle (\r);
+			}
+
+		\fill[red] (0,2) circle (3pt) node[above] {$S_1$ (H)};
+		\fill[green!60!black] (0,-2) circle (3pt) node[below] {$S_2$ (V)};
+		\fill[yellow!70!black] (2,0) circle (3pt) node[right] {$|R\rangle$};
+		\fill[purple] (-2,0) circle (3pt) node[left] {$|L\rangle$};
+		\fill[orange!80!red] (1.4,1.4) circle (3pt) node[above right] {$|D\rangle$};
+		\fill[blue!80!black] (-1.4,-1.4) circle (3pt) node[below left] {$|A\rangle$};
+
+		\draw[-Stealth, thick] (0,0) -- (0.8,0.8);
+		\node at (1.2,1.2) {$(\theta,\phi)$};
+
+	\end{tikzpicture}
+	\caption{Poincaré sphere representing polarization states of light. Each point on the sphere surface corresponds to a unique polarization state. For bipartite entanglement, composite Poincaré spheres can represent two-photon states. Poincaré Sphere: $S_1$ = Horizontal linear, $S_2$ = Vertical linear, $S_3$ = $45^\circ$ linear, $|R\rangle$ = Right circular, $|L\rangle$ = Left circular, $|D\rangle$ = Diagonal, $|A\rangle$ = Anti-diagonal.}
+	\label{fig:poincare-sphere}
+\end{figure}

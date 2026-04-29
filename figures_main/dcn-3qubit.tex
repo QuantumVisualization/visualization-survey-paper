@@ -1,0 +1,48 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.1]
+		\def\ax{3.0}    % Q1 dimension (horizontal): 2cm circle + 1cm gap = 3cm
+		\def\ay{3.0}  % Q2 dimension (vertical): 2cm circle + 1cm gap = 3cm
+		\def\sx{2.5}  % horizontal shift for back face (Q3=1)
+		\def\sy{2.0}  % vertical shift for back face (Q3=1)
+		
+		% Front face circles (Q3=0): solid, outer + inner (proportional sizes)
+		\foreach \x/\y/\label/\fill/\innerR in {0/0/000/blue!50/1.2, \ax/0/100/blue!50/0.8, 0/\ay/010/blue!50/1.0, \ax/\ay/110/blue!50/0.6} {
+			\node (\label) [draw, circle, minimum size=2.0cm, inner sep=0pt, thick] at (\x,\y) {};
+			\node[draw, circle, fill=\fill, minimum size=\innerR cm, thick] at (\x,\y) {};
+			\node[below, font=\tiny, fill=white, rounded corners, inner sep=1pt] at (\x,\y) {\label};
+		}
+		
+		% Back face circles (Q3=1): dashed, outer + inner (proportional sizes)
+		\foreach \x/\y/\label/\fill/\innerR in {\sx/\sy/001/green!50/1.0, \sx+\ax/\sy/101/green!50/0.6, \sx/\sy+\ay/011/green!50/0.8, \sx+\ax/\sy+\ay/111/green!50/0.4} {
+			\node (\label) [draw, circle, minimum size=2.0cm, inner sep=0pt, thick, dashed, opacity=0.6] at (\x,\y) {};
+			\node[draw, circle, fill=\fill, minimum size=\innerR cm, thick, dashed, opacity=0.6] at (\x,\y) {};
+			\node[below, font=\tiny, fill=white, opacity=0.8, rounded corners, inner sep=1pt] at (\x,\y) {\label};
+		}
+		
+		% Connect adjacent basis states by outer circle circumferences
+		% Front face (Q3=0) adjacencies
+		\draw ($(000.center)!1.0cm!(100.center)$) -- ($(100.center)!1.0cm!(000.center)$);
+		\draw ($(000.center)!1.0cm!(010.center)$) -- ($(010.center)!1.0cm!(000.center)$);
+		\draw ($(100.center)!1.0cm!(110.center)$) -- ($(110.center)!1.0cm!(100.center)$);
+		\draw ($(010.center)!1.0cm!(110.center)$) -- ($(110.center)!1.0cm!(010.center)$);
+		% Back face (Q3=1) adjacencies
+		\draw ($(001.center)!1.0cm!(101.center)$) -- ($(101.center)!1.0cm!(001.center)$);
+		\draw ($(001.center)!1.0cm!(011.center)$) -- ($(011.center)!1.0cm!(001.center)$);
+		\draw ($(101.center)!1.0cm!(111.center)$) -- ($(111.center)!1.0cm!(101.center)$);
+		\draw ($(011.center)!1.0cm!(111.center)$) -- ($(111.center)!1.0cm!(011.center)$);
+		% Between front and back faces (Q3 changes)
+		\draw ($(000.center)!1.0cm!(001.center)$) -- ($(001.center)!1.0cm!(000.center)$);
+		\draw ($(100.center)!1.0cm!(101.center)$) -- ($(101.center)!1.0cm!(100.center)$);
+		\draw ($(010.center)!1.0cm!(011.center)$) -- ($(011.center)!1.0cm!(010.center)$);
+		\draw ($(110.center)!1.0cm!(111.center)$) -- ($(111.center)!1.0cm!(110.center)$);
+		
+		% Dimensional axes (top-left origin, all pointing down or right)
+		\draw[->, thick] (-1.0,\ay+1.0) -- (\ax+0.5,\ay+1.0) node[right] {$Q_1$};
+		\draw[->, thick] (-1.0,\ay+1.0) -- (-1.0,-0.5) node[below] {$Q_2$};
+		\draw[->, thick] (-1.0,\ay+1.0) -- (\ax/2,\sy+\ay+1) node[right] {$Q_3$};
+		
+	\end{tikzpicture}
+	\caption{Three-qubit state in Dimensional Circular Notation. The cube structure is shown with upright faces: front face ($Q_3 = 0$) and back face ($Q_3 = 1$) positioned top-right, each circle labeled by its basis state $|Q_1Q_2Q_3\rangle$. Three-qubit DCN: Eight circles in a $2 \times 2 \times 2$ cube structure. Front face (solid): $Q_3 = 0$. Back face (dashed): $Q_3 = 1$.}
+	\label{fig:dcn-3qubit}
+\end{figure}

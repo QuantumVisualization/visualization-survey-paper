@@ -1,0 +1,19 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1]
+		\node[draw, circle, fill=green!30, minimum size=0.9cm, line width=1.5pt] (g1) at (0,0) {1};
+		\node[draw, circle, fill=green!30, minimum size=0.9cm, line width=1.5pt] (g2) at (2.5,0) {2};
+		\node[draw, circle, fill=green!30, minimum size=0.9cm, line width=1.5pt] (g3) at (5,0) {3};
+
+		\draw[thick] (g1) -- ++(0,-1) node[below] {$|+\rangle_1$};
+		\draw[thick] (g2) -- ++(0,-1) node[below] {$|+\rangle_2$};
+		\draw[thick] (g3) -- ++(0,-1) node[below] {$|+\rangle_3$};
+
+		\draw[thick] (g1) -- (g2) -- (g3);
+
+		\node at (1.25,0.7) {\small H};
+		\node at (3.75,0.7) {\small H};
+	\end{tikzpicture}
+	\caption{Graph state representation in ZX calculus. Three qubits prepared in $|+\rangle$ (green spiders) are connected by Hadamard boxes (yellow), forming the graph state. The vertical wires represent the physical qubit outputs. Graph state $|G\rangle$: Green spiders = graph vertices, H boxes = edges, Vertical wires = qubit outputs. Graph state in ZX: Each vertex is a green spider prepared in $|+\rangle$. Edges are represented by Hadamard boxes connecting the spiders, implementing the $CZ$ entangling operation.}
+	\label{fig:zx-graph-state}
+\end{figure}

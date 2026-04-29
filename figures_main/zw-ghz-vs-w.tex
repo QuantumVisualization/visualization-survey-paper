@@ -1,0 +1,33 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.1]
+		\begin{scope}
+			\node[draw, circle, fill=green!30, minimum size=1.2cm, line width=1.5pt] (ghz) at (0,0) {\textbf{GHZ}};
+			\draw[thick] (ghz) -- ++(0,1.2) node[above] {$|0\rangle$};
+			\draw[thick] (ghz) -- ++(0,-1.2) node[below] {$|0\rangle$};
+
+			\node[draw, circle, fill=red!30, minimum size=1.2cm, line width=1.5pt] (ghz2) at (0,2.5) {};
+			\draw[thick] (ghz2) -- ++(0,0.6);
+			\draw[thick] (ghz2) -- (ghz);
+
+			\node[below=1.5cm, align=center] at (0,0) {$\vert\text{GHZ}_N\rangle = \frac{1}{\sqrt{2}}(\vert0\rangle^{\otimes N} + \vert1\rangle^{\otimes N})$};
+		\end{scope}
+
+		\node at (5.5,1) {$\longleftrightarrow$};
+
+		\begin{scope}[xshift=10cm]
+			\node[draw, circle, fill=purple!40, minimum size=1.2cm, line width=1.5pt] (w1) at (0,0) {\textbf{W}};
+			\node[draw, circle, fill=purple!40, minimum size=1.2cm, line width=1.5pt] (w2) at (0,2.5) {};
+			\draw[thick] (w1) -- ++(0,-1);
+			\draw[thick] (w2) -- ++(0,1);
+			\draw[thick] (w1) -- ++(0.8,-0.6);
+			\draw[thick] (w1) -- ++(-0.8,-0.6);
+			\draw[thick] (w2) -- ++(0.8,0.6);
+			\draw[thick] (w2) -- ++(-0.8,0.6);
+
+			\node[below=1.5cm, align=center] at (0,0) {$\vert W_N\rangle = \frac{1}{\sqrt{N}}\sum_i \vert0\rangle^{\otimes i-1}\vert1\rangle\vert0\rangle^{\otimes N-i}$};
+		\end{scope}
+	\end{tikzpicture}
+	\caption{Comparison of GHZ and W states in ZW calculus notation. GHZ states have maximal entanglement across all bipartitions, while W states have distributed entanglement that survives tracing out any single party. These represent distinct SLOCC equivalence classes for $N \geq 3$. GHZ vs W SLOCC classes: GHZ and W states represent inequivalent classes of multipartite entanglement. They cannot be converted into each other by stochastic local operations and classical communication (SLOCC). GHZ-type: Maximal entanglement across all bipartitions. W-type: Distributed entanglement, survives tracing.}
+	\label{fig:zw-ghz-vs-w}
+\end{figure}

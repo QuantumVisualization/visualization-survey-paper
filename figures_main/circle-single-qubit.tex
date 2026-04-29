@@ -1,0 +1,17 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.1]
+		\node[draw, circle, minimum size=2.8cm, thick] (c0) at (0,0) {};
+		\node[draw, circle, fill=blue!60, minimum size=1.8cm, thick] at (0,0) {};
+		\draw[thick, black, -{Stealth[length=2mm]}] (0,0) -- (0.00,1.30);
+		\node[below] at (0,-1.6) {$|0\rangle$};
+		
+		\node[draw, circle, minimum size=2.8cm, thick] (c1) at (4,0) {};
+		\node[draw, circle, fill=green!60, minimum size=1.2cm, thick] at (4,0) {};
+		\draw[thick, black, -{Stealth[length=2mm]}] (4,0) -- (4.92,0.92);
+		\node[below] at (4,-1.6) {$|1\rangle$};
+		
+	\end{tikzpicture}
+	\caption{Single qubit state $|\psi\rangle = \alpha_0|0\rangle + \alpha_1|1\rangle$ in Circle Representation. The filled inner circles represent amplitude magnitudes, while the red radial line in the right circle indicates the phase $\phi$ relative to the $|0\rangle$ state. Single qubit in Circle Representation: The inner circle radius encodes the amplitude magnitude ($r = |\alpha|$), and the radial line angle encodes the phase. The probabilities are $P(0) = r_0^2$ and $P(1) = r_1^2$, with $r_0^2 + r_1^2 = 1$.}
+	\label{fig:circle-single-qubit}
+\end{figure}

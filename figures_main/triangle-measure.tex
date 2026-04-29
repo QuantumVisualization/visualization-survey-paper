@@ -1,0 +1,21 @@
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.1]
+		\coordinate (A) at (0,0);
+		\coordinate (B) at (4,0);
+		\coordinate (C) at (2,3.5);
+
+		\draw[thick, fill=green!15] (A) -- (B) -- (C) -- cycle;
+
+		\fill[red] (A) circle (2pt) node[below left] {$S_{A|BC}$};
+		\fill[red] (B) circle (2pt) node[below right] {$S_{B|AC}$};
+		\fill[red] (C) circle (2pt) node[above] {$S_{C|AB}$};
+
+		\draw[thick] (A) -- (B) node[midway, below] {$S_{AB}$};
+		\draw[thick] (B) -- (C) node[midway, right] {$S_{BC}$};
+		\draw[thick] (C) -- (A) node[midway, left] {$S_{AC}$};
+
+	\end{tikzpicture}
+	\caption{Triangle measure for three-qubit genuine multipartite entanglement. The one-to-other entropies $S_{A|BC}$, $S_{B|AC}$, $S_{C|AB}$ form a triangle whose area is proportional to the squared tangle $\tau$. This connects geometric and entropic measures of entanglement. Triangle measure for GME: For three qubits, the triangle formed by one-to-other entropies has area proportional to the squared tangle $\tau$. $S_{A|BC}$ = entropy of qubit A relative to rest, Area $\propto$ Tangle $\tau$.}
+	\label{fig:triangle-measure}
+\end{figure}
