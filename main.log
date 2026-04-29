@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.1)  28 APR 2026 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.1)  29 APR 2026 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -854,98 +854,78 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout6 = `main.toc'.
 
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+(./figures_main/circle-single-qubit.tex) (./figures_main/circle-two-qubit.tex)
+[3] (./figures_main/dcn-2qubit.tex) (./figures_main/dcn-3qubit.tex)
+(./figures_main/dcn-3qubit-ghz.tex
+<figures_main/dcn-3qubit-ghz.png, id=203, 433.62pt x 433.62pt>
+File: figures_main/dcn-3qubit-ghz.png Graphic file (type png)
+<use figures_main/dcn-3qubit-ghz.png>
+Package pdftex.def Info: figures_main/dcn-3qubit-ghz.png  used on input line 3.
 
-Package natbib Warning: Citation `Undermind' on page 2 undefined on input line 
-93.
-
-
-Package natbib Warning: Citation `hein2004entanglement' on page 2 undefined on 
-input line 93.
-
-
-Package natbib Warning: Citation `hein2006multiparty' on page 2 undefined on in
-put line 93.
-
-
-Package natbib Warning: Citation `cqm' on page 2 undefined on input line 93.
-
-
-Package natbib Warning: Citation `EntangledGraphs' on page 2 undefined on input
- line 93.
-
-[2]
-
-Package natbib Warning: Citation `circle-rep' on page 3 undefined on input line
- 111.
-
-
-Package natbib Warning: Citation `circle-rep' on page 3 undefined on input line
- 116.
-
-[3]
-
-Package natbib Warning: Citation `dimensional-circle' on page 4 undefined on in
-put line 186.
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+(pdftex.def)             Requested size: 306.00311pt x 306.01973pt.
+) (./figures_main/dcn-3qubit-w.tex
+<figures_main/dcn-3qubit-w.png, id=205, 433.62pt x 433.62pt>
+File: figures_main/dcn-3qubit-w.png Graphic file (type png)
+<use figures_main/dcn-3qubit-w.png>
+Package pdftex.def Info: figures_main/dcn-3qubit-w.png  used on input line 3.
+(pdftex.def)             Requested size: 306.00311pt x 306.01973pt.
+)
+(./figures_main/dcn-3qubit-separable.tex
+<figures_main/dcn-3qubit-separable.png, id=206, 433.62pt x 433.62pt>
+File: figures_main/dcn-3qubit-separable.png Graphic file (type png)
+<use figures_main/dcn-3qubit-separable.png>
+Package pdftex.def Info: figures_main/dcn-3qubit-separable.png  used on input l
+ine 3.
+(pdftex.def)             Requested size: 306.00311pt x 306.01973pt.
+) [4] [5 <./figures_main/dcn-3qubit-ghz.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 []|\OT1/cmr/m/n/9 Direct ge-o-met-ric in-tu-ition;
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 308--309
+Underfull \hbox (badness 6775) in paragraph at lines 190--191
 \OT1/cmr/m/n/9 phase and su-per-po-si-tion as
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 308--309
+Underfull \hbox (badness 1259) in paragraph at lines 190--191
 \OT1/cmr/m/n/9 an-gu-lar co-or-di-nates; com-pact
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
 []|\OT1/cmr/m/n/9 Multi-qubit ba-sis
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 312--313
+Underfull \hbox (badness 4072) in paragraph at lines 194--195
 []|\OT1/cmr/m/n/9 Dimensional ar-range-ment re-
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 314--315
+Underfull \hbox (badness 1107) in paragraph at lines 196--197
 []|\OT1/cmr/m/n/9 Geometric con-stel-la-tion of $\OML/cmm/m/it/9 N$
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 314--315
+Underfull \hbox (badness 1648) in paragraph at lines 196--197
 \OT1/cmr/m/n/9 points; clas-si-fi-ca-tion of sym-
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 314--315
+Underfull \hbox (badness 1902) in paragraph at lines 196--197
 \OT1/cmr/m/n/9 met-ric en-tan-gle-ment; nat-u-ral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 \OT1/cmr/m/n/9 con-nec-tion to stere-o-graphic
  []
 
-
-Package natbib Warning: Citation `majorana1932atomi' on page 6 undefined on inp
-ut line 322.
-
-[6]
-
-Package natbib Warning: Citation `EntangledGraphs' on page 7 undefined on input
- line 349.
-
-
-Package natbib Warning: Citation `Undermind' on page 7 undefined on input line 
-362.
-
+[6 <./figures_main/dcn-3qubit-w.png>] [7 <./figures_main/dcn-3qubit-separable.p
+ng>] (./figures_main/phase-space-torus.tex) [8]
+(./figures_main/wigner-function.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -970,145 +950,50 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
-[7] [8] [9]
-
-Package natbib Warning: Citation `GraphStateVis' on page 10 undefined on input 
-line 692.
-
-[10]
-
-Package natbib Warning: Citation `hein2004entanglement' on page 11 undefined on
- input line 700.
-
-
-Package natbib Warning: Citation `danielsen2008graph' on page 11 undefined on i
-nput line 700.
-
-[11]
-
-Package natbib Warning: Citation `Raissi2021' on page 12 undefined on input lin
-e 747.
-
-
-Package natbib Warning: Citation `EntangledGraphs' on page 12 undefined on inpu
-t line 830.
-
-[12]
-
-Package natbib Warning: Citation `SpanningGraphs2025' on page 13 undefined on i
-nput line 859.
-
-
-Package natbib Warning: Citation `Undermind' on page 13 undefined on input line
- 866.
-
-[13]
-Underfull \hbox (badness 5022) in paragraph at lines 1011--1011
+) (./figures_main/poincare-sphere.tex) (./figures_main/hypertree.tex)
+(./figures_main/entanglement-landscape.tex) [9] [10]
+(./figures_main/graph-state-construction.tex) (./figures_main/cluster-state.tex
+) (./figures_main/star-graph.tex) [11]
+(./figures_main/local-complementation.tex) [12]
+(./figures_main/stabilizer-generators.tex)
+(./figures_main/ghz-graph-equivalence.tex) [13] [14]
+(./figures_main/hypergraph-basic.tex) (./figures_main/ghz-hypergraph.tex)
+(./figures_main/lattice-hypergraph.tex)
+Underfull \hbox (badness 5022) in paragraph at lines 439--439
 [][] \OT1/cmr/bx/n/9 Root $\OML/cmm/m/it/9 o$ 
  []
 
-
-Package natbib Warning: Citation `Hikihara2024' on page 14 undefined on input l
-ine 1023.
-
-[14] [15]
-
-Package natbib Warning: Citation `cqm' on page 16 undefined on input line 1035.
-
-
-
-Package natbib Warning: Citation `coecke2008interacting' on page 16 undefined o
-n input line 1035.
-
-
-Package natbib Warning: Citation `zx-calculus' on page 16 undefined on input li
-ne 1035.
-
-[16]
-
-Package natbib Warning: Citation `cqm' on page 17 undefined on input line 1077.
-
-
-
-Underfull \hbox (badness 5490) in paragraph at lines 1192--1193
-[][]\OT1/cmr/bx/n/9 Graph state $\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 G\OMS/cmsy/m/
-n/9 i$ 
- []
-
-
-Underfull \hbox (badness 6608) in paragraph at lines 1195--1195
-[]\OT1/cmr/m/n/9 H boxes = edges 
- []
-
-
-Package natbib Warning: Citation `zw-calculus' on page 17 undefined on input li
-ne 1214.
-
-
-Package natbib Warning: Citation `zw-phd' on page 17 undefined on input line 12
-14.
-
-[17] [18] [19] [20]
-Overfull \hbox (5.17996pt too wide) in paragraph at lines 1400--1401
+[15] [16] [17] (./figures_main/zx-spiders.tex)
+(./figures_main/zx-bell-state.tex) (./figures_main/zx-spider-fusion.tex)
+(./figures_main/zx-graph-state.tex) [18] [19] (./figures_main/zw-w-spider.tex)
+(./figures_main/zw-ghz-vs-w.tex) (./figures_main/zw-z-vs-w.tex) [20]
+Overfull \hbox (5.17996pt too wide) in paragraph at lines 604--605
 []\OT1/cmr/bx/n/10 Device-independent quan-tum cryp-tog-ra-phy\OT1/cmr/m/n/10 :
  The poly-tope frame-work pro-vides tools for device-independent
  []
 
-[21]
+(./figures_main/entanglement-polytope-3qubit.tex)
+(./figures_main/entanglement-polytope-position.tex) [21] [22]
+(./figures_main/negativity-visualization.tex)
+(./figures_main/ckw-inequality.tex) (./figures_main/triangle-measure.tex)
+[23] [24] [25] [26] [27] [28] (./main.bbl
+Underfull \hbox (badness 1859) in paragraph at lines 154--159
+[]\OT1/cmr/m/n/9 Hadzihasanovic, Amar (2017a), ``The al-ge-bra of en-tan-gle-me
+nt and the ge-om-e-try of com-po-si-tion,'' arXiv preprint
+ []
 
-Package natbib Warning: Citation `EntanglementDistance' on page 22 undefined on
- input line 1471.
-
-[22]
-
-Package natbib Warning: Citation `SpanningGraphs2025' on page 23 undefined on i
-nput line 1484.
-
-[23] [24]
-
-Package natbib Warning: Citation `burchardt2021' on page 25 undefined on input 
-line 1615.
-
-
-Package natbib Warning: Citation `GraphStateVis' on page 25 undefined on input 
-line 1639.
-
-[25]
-
-Package natbib Warning: Citation `Raissi2021' on page 26 undefined on input lin
-e 1657.
-
-
-Package natbib Warning: Citation `Englbrecht2020' on page 26 undefined on input
- line 1661.
-
-[26]
-
-Package natbib Warning: Citation `Hikihara2024' on page 27 undefined on input l
-ine 1737.
-
-[27]
-
-Package natbib Warning: Citation `SpanningGraphs2025' on page 28 undefined on i
-nput line 1775.
-
-[28]
-No file main.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-[29] (./main.aux (./macros.aux))
+) [29] (./main.aux (./macros.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8BB6F25C563D0B035E6395151077FDC2;4181.
+(rerunfilecheck)             Checksum: 055A77DE8F7C9794FF5C3FF72C8F7EB4;4287.
  ) 
 Here is how much of TeX's memory you used:
- 30008 strings out of 476091
- 574974 string characters out of 5794082
- 1889330 words of memory out of 5000000
- 49794 multiletter control sequences out of 15000+600000
- 527475 words of font info for 87 fonts, out of 8000000 for 9000
+ 30324 strings out of 476091
+ 583296 string characters out of 5794082
+ 1892330 words of memory out of 5000000
+ 49987 multiletter control sequences out of 15000+600000
+ 527820 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,80p,1125b,1402s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,12n,80p,1125b,1404s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -1133,13 +1018,14 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (29 pages, 478051 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm1000.pfb>
+Output written on main.pdf (29 pages, 908337 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 528 compressed objects within 6 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

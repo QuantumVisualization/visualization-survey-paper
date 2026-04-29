@@ -12,6 +12,7 @@ rmp,
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
+\input{figures_main/stabilizer-generators.tex}
 %\usepackage[showframe,%Uncomment any one of the following lines to test 
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
 %%text={7in,10in},centering,
@@ -26,6 +27,7 @@ rmp,
 \usepackage{hyperref}
 \usepackage{tcolorbox}
 \usepackage{enumitem}
+\input{figures_main/ghz-graph-equivalence.tex}
 \usepackage{physics}
 \usepackage{cleveref}
 \usepackage{tikz}
@@ -38,9 +40,8 @@ rmp,
     urlcolor=cyan,
     citecolor=black
 }
-
 \begin{document}
-\include{macros}
+%\include{macros}
 % \preprint{APS/123-QED}
 
 \title{Quantum State Visualization}% Force line breaks with \\
@@ -90,7 +91,7 @@ This survey examines the landscape of entanglement visualization methods, organi
 	\item \textbf{Specialized State Classes}: Visualization approaches tailored to specific families of states such as symmetric states, stabilizer states, and Dicke states.
 \end{enumerate}
 
-Our treatment emphasizes \emph{multipartite entanglement}, where the need for visualization is most acute and where the richest variety of approaches has been developed. We draw heavily from foundational works in graph states \cite{hein2004entanglement,hein2006multiparty}, categorical quantum mechanics \cite{cqm}, and entanglement classification \cite{EntangledGraphs}.
+Our treatment emphasizes \emph{multipartite entanglement}, where the need for visualization is most acute and where the richest variety of approaches has been developed. We draw heavily from the comprehensive survey by Anticoli et al. \cite{Undermind}, which provides an extensive overview of entanglement visualization techniques, as well as from foundational works in graph states \cite{hein2004entanglement,hein2006multiparty}, categorical quantum mechanics \cite{cqm}, and entanglement classification \cite{EntangledGraphs}.
 
 The survey is organized as follows. We begin in \cref{sec:geometric} with geometric methods, covering the Bloch sphere, Majorana representation, coherence vectors, and phase space methods. \cref{sec:graph} examines graph-based approaches including graph states, entangled graphs, and hypergraph methods. \cref{sec:algebraic} presents algebraic and categorical methods, with detailed treatments of ZX and ZW calculi. \cref{sec:classification} discusses entanglement classification through polytopes and measures. \cref{sec:specialized} addresses specialized state classes including symmetric states, stabilizer states, and Dicke states. We conclude in \cref{sec:conclusion} with a synthesis and discussion of open problems.
 
@@ -108,12 +109,12 @@ For single qubits, the Bloch sphere provides an elegant geometric representation
 
 For bipartite qubit systems, the space of states cannot be fully represented by a simple product of two Bloch spheres due to entanglement. However, the concept can be extended through various approaches. The \textbf{generalized Bloch representation} for two qubits involves a 15-dimensional parameter space, which can be projected onto lower-dimensional subspaces for visualization.
 
-A particularly relevant extension for entanglement visualization is the \textbf{Circle Representation}, which uses circles to represent each computational basis state. This approach and its extension, the \textbf{Dimensional Circular Notation (DCN)}, are covered in detail in \cref{sec:circle-rep} and \cref{sec:dcn}, respectively.
+A particularly relevant extension for entanglement visualization is the \textbf{Circle Representation} \cite{circle-rep}, which uses circles to represent each computational basis state. This approach and its extension, the \textbf{Dimensional Circular Notation (DCN)}, are covered in detail in \cref{sec:circle-rep} and \cref{sec:dcn}, respectively.
 
 \subsection{Circle Representation}
 \label{sec:circle-rep}
 
-The Circle Representation provides an intuitive visualization of quantum states by representing each computational basis state as a circle. This approach offers a complementary perspective to the Bloch sphere, particularly well-suited for multi-qubit systems where the exponential growth of the Hilbert space makes direct geometric representation challenging.
+The Circle Representation provides an intuitive visualization of quantum states by representing each computational basis state as a circle \cite{circle-rep}. This approach offers a complementary perspective to the Bloch sphere, particularly well-suited for multi-qubit systems where the exponential growth of the Hilbert space makes direct geometric representation challenging.
 
 The fundamental elements of the Circle Representation are:
 
@@ -124,9 +125,8 @@ The fundamental elements of the Circle Representation are:
 \end{enumerate}
 
 This visualization scheme is particularly effective because it makes both probabilities and phases immediately visible---features that require separate analysis in the Bloch sphere representation. The phase information is displayed as relative phase differences between basis states, providing direct visual access to quantum interference effects.
-
-
 \input{figures_main/circle-single-qubit.tex}
+
 
 For multi-qubit systems, the circles are arranged in a grid pattern. A two-qubit state $|\psi\rangle = \sum_{i,j \in \{0,1\}} \alpha_{ij}|ij\rangle$ is represented by a $2 \times 2$ grid of four circles, with each circle corresponding to basis states $|00\rangle$, $|01\rangle$, $|10\rangle$, and $|11\rangle$. This grid arrangement extends naturally to $n$ qubits: an $n$-qubit system is represented by a $2^n$ circles arranged in an $n$-dimensional grid. While this grid cannot be directly visualized for $n > 3$, the principle scales conceptually.
 
@@ -139,7 +139,7 @@ There is a natural relationship between the Circle Representation and the Bloch 
 \subsection{Dimensional Circular Notation}
 \label{sec:dcn}
 
-The Dimensional Circular Notation (DCN) extends the Circle Representation by arranging circles in a dimensional structure that directly reflects the number of qubits. This extension was developed specifically to address the challenge of visualizing entanglement in multipartite quantum systems.
+The Dimensional Circular Notation (DCN) extends the Circle Representation by arranging circles in a dimensional structure that directly reflects the number of qubits \cite{dimensional-circle}. This extension was developed specifically to address the challenge of visualizing entanglement in multipartite quantum systems.
 
 The core principle of DCN is straightforward but powerful: \textbf{each qubit corresponds to one dimension}, and the circles representing basis states are arranged along these dimensions. This creates an $n$-dimensional hypercube structure for an $n$-qubit system:
 
@@ -152,21 +152,14 @@ The core principle of DCN is straightforward but powerful: \textbf{each qubit co
 
 This dimensional arrangement is not merely a visual convenience---it directly encodes information about the separability structure of the quantum state. A product state (separable state) in DCN takes a particularly simple form: all non-zero amplitudes are confined to circles lying in a sub-dimensional structure that can be decomposed into independent qubit contributions. Conversely, states with genuine multipartite entanglement require the full dimensional structure to represent.
 
-\input{figures_main/dcn-2qubit.tex}
 
+\input{figures_main/dcn-2qubit.tex}
 For three qubits, the DCN forms a three-dimensional cube structure with eight circles.
 
-\input{figures_main/dcn-3qubit.tex}
-
-Concrete examples of three-qubit states in DCN illustrate the representation's ability to distinguish different entanglement structures:
-
-\input{figures_main/dcn-3qubit-ghz.tex}
-
-\input{figures_main/dcn-3qubit-w.tex}
-
-\input{figures_main/dcn-3qubit-separable.tex}
 
 The DCN provides several advantages for visualizing quantum states:
+\input{figures_main/dcn-3qubit.tex}
+\input{figures_main/cluster-state.tex}
 
 \begin{enumerate}
 	\item \textbf{Direct amplitude visualization}: Unlike the Bloch sphere which requires mapping from a high-dimensional parameter space, DCN shows all $2^n$ amplitudes directly.
@@ -178,6 +171,7 @@ The DCN provides several advantages for visualizing quantum states:
 The mathematical conditions for separability in DCN take a particularly elegant form. A state is product (separable) across qubit $k$ if and only if the amplitude distribution factorizes: $\alpha_{i_1 \ldots i_n} = a_{i_1}^{(1)} \cdots a_{i_n}^{(n)}$. In the DCN visualization, this factorization manifests as a structure where each qubit's dimension can be analyzed independently. For genuine multipartite entanglement, the full $n$-dimensional structure is required.
 
 This representation has proven particularly valuable for educational purposes, as it provides an accessible visualization of quantum states that emphasizes the computational basis structure rather than abstract geometric properties. The Circles can be drawn with radius proportional to $\sqrt{P(i)}$, making probabilities immediately apparent, while phase information remains visible through radial lines.
+\input{figures_main/star-graph.tex}
 
 \begin{table}[htbp]
 	\centering
@@ -241,7 +235,7 @@ Phase space methods provide alternative geometric representations by mapping qua
 
 For qubits, one can consider phase space representations based on:
 \begin{itemize}
-	\item \textbf{Torus knots}: The quasicrystal approach represents qubit states as points on a torus, with entanglement manifested as linking patterns in the visualization.
+	\item \textbf{Torus knots}: The quasicrystal approach represents qubit states as points on a torus, with entanglement manifested as linking patterns in the visualization \cite{Undermind}.
 	\item \textbf{Quasi-probability distributions}: The discrete Wigner function provides a phase space representation for qudit systems. Negative quasi-probabilities are indicative of non-classicality and entanglement.
 	\item \textbf{Poincaré spheres}: For optical systems, the Poincaré sphere provides a natural representation of polarization states, which can be extended to represent entanglement through composite spheres.
 \end{itemize}
@@ -250,25 +244,23 @@ The Great Deluge Algorithm provides an interesting approach to visualizing the "
 
 Hypertrees offer another geometric approach, representing the entanglement structure as a hierarchical tree where nodes correspond to bipartitions and edge weights represent entanglement measures. This approach is particularly natural for understanding hierarchical entanglement structure in tensor network states.
 
+
+
+
 \input{figures_main/phase-space-torus.tex}
 
-\input{figures_main/wigner-function.tex}
-
-\input{figures_main/poincare-sphere.tex}
-
-\input{figures_main/hypertree.tex}
-
-\input{figures_main/entanglement-landscape.tex}
 
 \subsection{Phase Space Representation for Continuous-Variable Systems}
 \label{sec:cv-phase-space}
 
+\input{figures_main/wigner-function.tex}
 Continuous-variable (CV) quantum systems are characterized by observables with continuous spectra, such as position and momentum. In quantum optics, the relevant operators are the \textbf{quadrature operators} $\hat{x}$ (phase) and $\hat{p}$ (amplitude), which satisfy $[\hat{x}, \hat{p}] = i$. Phase space provides a natural geometric framework for representing and visualizing these quantum states.
 
 \textbf{Phase space structure:} Each point $(q, p)$ represents a possible state of the system. Unlike classical mechanics where states are points, quantum states spread over regions of phase space due to the uncertainty principle $\Delta x \cdot \Delta p \geq \frac{1}{2}$. This spreading is visualized as the ``uncertainty blob''.
 
 \textbf{Quasi-probability distributions:} Three main quasi-probability distributions represent quantum states in phase space:
 
+\input{figures_main/poincare-sphere.tex}
 \begin{itemize}
 	\item \textbf{Wigner function} $W(x,p)$: The most widely used representation. For separable states, $W \geq 0$ everywhere; negative regions indicate non-classicality and entanglement.
 	\item \textbf{Husimi Q-function} $Q(\alpha)$: Always non-negative, but provides less detailed information about quantum features.
@@ -276,6 +268,7 @@ Continuous-variable (CV) quantum systems are characterized by observables with c
 \end{itemize}
 
 \textbf{Connection to entanglement:} For bipartite CV states, the Wigner function enables entanglement detection through partial transposition. A state $\rho_{AB}$ is entangled if its Wigner function has negative regions when traced over one party. The \textbf{negativity} of the Wigner function provides a quantifier of non-classicality directly relevant to entanglement.
+\input{figures_main/hypertree.tex}
 
 \textbf{Gaussian vs. non-Gaussian states:} Gaussian states (coherent, squeezed, thermal) are fully characterized by their covariance matrix and can be efficiently manipulated in phase space. Non-Gaussian states, with their richer Wigner function structures, are essential for universal quantum computation but more challenging to characterize.
 
@@ -284,6 +277,7 @@ The torus structure in Figure~\ref{fig:phase-space-torus} arises from periodic b
 \section{Graph-Based Methods}
 \label{sec:graph}
 
+\input{figures_main/entanglement-landscape.tex}
 Graph-based methods represent quantum states through network structures, where vertices correspond to quantum systems (qubits, qudits) and edges represent correlations or entanglement. These methods have proven remarkably fruitful, particularly for stabilizer states and certain classes of multipartite entanglement.
 
 \subsection{Graph States}
@@ -295,7 +289,7 @@ Graph states represent a fundamental class of multipartite entangled states that
 \end{equation}
 where $U_{ab} = \text{diag}(1, 1, 1, -1)$ is the controlled-$Z$ gate acting on qubits $a$ and $b$, and $|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ is the Hadamard eigenstate.
 
-\input{figures_main/graph-state-construction.tex}
+
 
 
 Each graph state has a beautiful interpretation: vertices represent qubits prepared in the $|+\rangle$ state, and edges represent the application of entangling $CZ$ gates. The resulting state exhibits genuine multipartite entanglement and serves as a universal resource for measurement-based quantum computation.
@@ -303,14 +297,15 @@ Each graph state has a beautiful interpretation: vertices represent qubits prepa
 The relationship between graph structure and entanglement properties is rich:
 \begin{itemize}
 	\item \textbf{Connectivity and entanglement}: More connected graphs generally support more robust multipartite entanglement.
+\input{figures_main/graph-state-construction.tex}
 	\item \textbf{Cluster states}: The 2D square lattice graph gives the famous cluster state, which is a universal resource for one-way quantum computation.
 	\item \textbf{Star graphs}: Produce highly symmetric states with applications in quantum networking.
 	\item \textbf{Graph connectivity and entanglement depth}: The maximum genuine entanglement depth achievable in a graph state is related to the graph's connectivity.
 \end{itemize}
 
-\input{figures_main/cluster-state.tex}
 
-\input{figures_main/star-graph.tex}
+
+
 
 The \textbf{GraphStateVis} tool \cite{GraphStateVis} provides an interactive web-based platform for visualizing graph states and their stabilizer groups. This tool enables:
 \begin{itemize}
@@ -323,8 +318,6 @@ The \textbf{GraphStateVis} tool \cite{GraphStateVis} provides an interactive web
 Local complementation (LC) provides a key operation: applying LC on a vertex $v$ inverts the connectivity between all neighbors of $v$. Graph states that are equivalent under LC (or LC plus edge deletion/addition, denoted LCE) have the same entanglement properties. This classification has been extensively studied, with complete classification available up to 12 qubits \cite{hein2004entanglement,danielsen2008graph}.
 
 
-\input{figures_main/local-complementation.tex}
-
 The \textbf{stabilizer formalism} provides a powerful algebraic description of graph states. The stabilizer group $\mathcal{S}$ is generated by $N$ independent operators, each of which has $|G\rangle$ as a +1 eigenvector. The stabilizer generators can be read directly from the graph structure.
 
 Elliott, Eastin, and Caves developed a \textbf{graphical description of stabilizer states} that provides intuitive understanding of how Clifford operations and Pauli measurements affect graph states. This work complements the algebraic approach with visual intuition.
@@ -335,15 +328,17 @@ Recent work extends the framework to directed graphs, relating multipartite enta
 
 Stabilizer states and graph states have been further connected to:
 \begin{itemize}
+\input{figures_main/local-complementation.tex}
 	\item \textbf{Quantum error correction}: Graph codes provide a natural framework for stabilizer codes.
 	\item \textbf{Quantum networks}: Graph states serve as entanglement resources in quantum routing protocols.
-	\item \textbf{Classical codes}: Recent work shows connections between classical error-correcting codes and k-UNI (k-uniform) and AME (Absolutely Maximally Entangled) states.
+	\item \textbf{Classical codes}: Recent work shows connections between classical error-correcting codes and k-UNI (k-uniform) and AME (Absolutely Maximally Entangled) states \cite{Raissi2021}.
 \end{itemize}
 
 
-\input{figures_main/stabilizer-generators.tex}
 
-\input{figures_main/ghz-graph-equivalence.tex}
+
+
+
 
 \subsection{Entangled Graphs}
 \label{sec:entangled-graphs}
@@ -377,14 +372,14 @@ has only bipartite entanglement between qubits 1-2 and 3-4, with no global entan
 
 The method can be extended to larger systems, though the combinatorial complexity grows rapidly. The approach provides an intuitive visual language for communicating entanglement structure.
 
-A related approach using \textbf{spanning graphs} was developed for studying entanglement spreading in hybrid quantum circuits with measurements. This graphical representation allows identification of the evolution of genuine multipartite entanglement in general subregions, with minimal spanning graphs connecting various parties.
+A related approach using \textbf{spanning graphs} was developed for studying entanglement spreading in hybrid quantum circuits with measurements \cite{SpanningGraphs2025}. This graphical representation allows identification of the evolution of genuine multipartite entanglement in general subregions, with minimal spanning graphs connecting various parties.
 
 \subsection{Hypergraph Methods}
 \label{sec:hypergraphs}
 
 Hypergraphs extend ordinary graphs by allowing edges (called hyperedges) to connect more than two vertices. This makes them natural candidates for representing multipartite entanglement, where correlations can involve more than two parties.
 
-Researchers have developed a comprehensive framework using hypergraphs to represent and classify multipartite entanglement. The key observations are:
+Anticoli et al. \cite{Undermind} developed a comprehensive framework using hypergraphs to represent and classify multipartite entanglement. The key observations are:
 
 \begin{enumerate}
 	\item \textbf{Hyperedges represent multipartite correlations}: While ordinary edges capture pairwise correlations, hyperedges can capture genuine multipartite entanglement that cannot be decomposed into pairwise contributions.
@@ -406,111 +401,11 @@ The hypergraph method connects naturally to the concept of \textbf{entanglement 
 The lattice hypergraph approach provides a bridge between continuous-variable entanglement and discrete graph representations, suggesting that the entanglement structure of any quantum state can be captured through appropriate discrete structures.
 
 
-\input{figures_main/hypergraph-basic.tex}
-
-\input{figures_main/ghz-hypergraph.tex}
-
-\input{figures_main/lattice-hypergraph.tex}
-
-
-\begin{figure*}[htbp]
-	\centering
-	\begin{tikzpicture}[scale=1]
-		\begin{scope}
-			\node[draw, circle, fill=red!30, minimum size=0.9cm] (root) at (0,3) {$o$};
-			\node[draw, circle, fill=green!30, minimum size=0.8cm] (aux1) at (-2,1.5) {Aux$_1$};
-			\node[draw, circle, fill=green!30, minimum size=0.8cm] (aux2) at (2,1.5) {Aux$_2$};
-			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (q1) at (-3,0) {$q_1$};
-			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (q2) at (-1,0) {$q_2$};
-			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (q3) at (1,0) {$q_3$};
-			\node[draw, circle, fill=blue!30, minimum size=0.7cm] (q4) at (3,0) {$q_4$};
-
-			\draw[thick] (root) -- (aux1);
-			\draw[thick] (root) -- (aux2);
-			\draw[thick] (aux1) -- (q1);
-			\draw[thick] (aux1) -- (q2);
-			\draw[thick] (aux2) -- (q3);
-			\draw[thick] (aux2) -- (q4);
-		\end{scope}
-
-		\begin{scope}[xshift=7cm]
-            \node[ draw,   rounded corners,   fill=yellow!20,   text width=4cm,   align=left ] (legend) at (0,1.5) {
-                \textbf{Tree Tensor Network}\\[0.4cm]
-                \tikz[baseline=-0.5ex]\node[draw, circle, fill=red!30, inner sep=1pt, minimum size=0.4cm] {}; \textbf{Root} $o$\\[0.3cm]
-                \tikz[baseline=-0.5ex]\node[draw, circle, fill=green!30, inner sep=1pt, minimum size=0.4cm] {}; \textbf{Auxiliary} bonds\\[0.3cm]
-                \tikz[baseline=-0.5ex]\node[draw, circle, fill=blue!30, inner sep=1pt, minimum size=0.4cm] {}; \textbf{Physical} qubits $q_i$
-			};
-		\end{scope}
-	\end{tikzpicture}
-	\caption{Tree Tensor Network (TTN) representation of multipartite states. Physical qubits ($q_i$) are at the leaf nodes, while auxiliary bonds (Aux$_j$) encode the entanglement geometry. The bond dimension $\chi$ controls the entanglement rank across each cut.}
-	\label{fig:tree-tensor-network}
-\end{figure*}
 
 
 
-Tensor network methods, particularly \textbf{tree tensor networks (TTNs)}, provide another visualization framework where the network structure itself represents the entanglement geometry \cite{Hikihara2024}. The TTN structural optimization algorithm can visualize the spatial pattern of spin-singlet pairs in quantum many-body states, with the network structure revealing how entanglement is distributed across the system.
 
-The key insight is that the TTN structure should minimize entanglement entropy at each auxiliary bond, which corresponds to finding the optimal representation of the state's entanglement geometry. This approach has been successfully applied to the rainbow chain model, reproducing the pattern of singlet-pair distribution in the ground state.
 
-\section{Algebraic and Categorical Methods}
-\label{sec:algebraic}
-
-Algebraic and categorical methods provide powerful formalisms for reasoning about quantum entanglement through abstract mathematical structures. These approaches, originating from category theory and the theory of compact closed categories, have revolutionized our understanding of quantum processes.
-
-\subsection{ZX Calculus}
-\label{sec:zx}
-
-The ZX calculus, developed by Coecke and Duncan \cite{cqm,coecke2008interacting,zx-calculus}, is a diagrammatic calculus for reasoning about quantum processes. It represents quantum states and operations as \textbf{string diagrams} in a compact closed category.
-
-The fundamental objects in the ZX calculus are:
-\begin{itemize}
-	\item \textbf{Spiders}: Colored nodes (typically red and green) representing certain linear maps. Red spiders (Z spiders) correspond to the computational basis, while green spiders (X spiders) correspond to the Hadamard-transformed basis.
-	\item \textbf{Wires}: Lines representing quantum systems (qubits). Input wires enter from the bottom, output wires exit from the top.
-	\item \textbf{Standard generators}: The calculus includes identity, Hadamard, and phase gates as basic elements.
-\end{itemize}
-
-The key feature of the ZX calculus is the \textbf{spider theorem}: When two spiders of the same color are connected by wires, they can be fused into a single spider. This provides a powerful tool for simplifying quantum circuits and reasoning about entanglement.
-
-For example, the Bell state $|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$ is represented as a green spider with two output legs (one for each qubit) connected to a red spider with two input legs, with the appropriate phase angles.
-
-The ZX calculus has proven particularly valuable for visualizing and reasoning about:
-\begin{enumerate}
-	\item \textbf{Bipartite entanglement}: The Bell states have simple spider representations that make their entanglement structure transparent.
-	\item \textbf{Graph state entanglement}: Graph states correspond to certain families of spiders, making the ZX calculus ideal for studying their properties.
-	\item \textbf{Quantum circuits}: The calculus provides a visual alternative to circuit diagrams, often revealing structure that is obscured in standard notation.
-	\item \textbf{Measurement-based quantum computation}: The one-way quantum computation model has a natural representation in the ZX calculus.
-\end{enumerate}
-
-The spider theorem states that when we connect two spiders with any number of wires, the result depends only on the total number of wires, not on how they are connected. This remarkable property encodes the behavior of certain quantum operations and makes the calculus particularly powerful.
-
-A key limitation of the ZX calculus is its primary focus on \textbf{bipartite} entanglement. While it can represent multipartite states, the calculus is most natural for systems with a clear bipartite structure. This limitation motivated the development of the ZW calculus, which explicitly handles multipartite entanglement.
-
-The ZX calculus has been extended in various directions:
-\begin{itemize}
-	\item \textbf{Completeness}: The calculus is complete for pure qubit quantum mechanics, meaning any identity can be derived from the diagrammatic rules.
-	\item \textbf{Generalized ZX}: Extensions to higher-dimensional systems (qudits) and continuous-variable systems.
-	\item \textbf{Quantum foundations}: The calculus has been used to provide novel perspectives on quantum foundations and the structure of quantum theory.
-\end{itemize}
-
-Graph states, a major class of multipartite entangled states, have a particularly elegant representation in the ZX calculus. A graph state is represented as a collection of green spiders (one for each vertex) connected by yellow Hadamard boxes (which can be decomposed into red-green pairs). This representation makes the stabilizer structure of graph states visually apparent.
-
-The relationship between graph states and ZX diagrams provides:
-\begin{itemize}
-	\item A visual method for computing stabilizers
-	\item Intuitive understanding of local complementation
-	\item Tools for studying LC equivalence classes
-	\item Connection to the one-way computation model
-\end{itemize}
-
-The work of \cite{cqm} provides an in-depth exploration of how the ZX calculus captures the structure of graph states and their entanglement properties, demonstrating how the diagrammatic representation makes manifest the connection between graph structure and quantum correlations.
-
-\input{figures_main/zx-spiders.tex}
-
-\input{figures_main/zx-bell-state.tex}
-
-\input{figures_main/zx-spider-fusion.tex}
-
-\input{figures_main/zx-graph-state.tex}
 
 \subsection{ZW Calculus}
 \label{sec:zw}
@@ -519,6 +414,7 @@ The ZW calculus, introduced by Coecke and Kissinger \cite{zw-calculus,zw-phd}, w
 
 The key innovation of the ZW calculus is the introduction of the \textbf{W spider}, which explicitly captures multipartite entanglement. The W spider represents the $N$-partite entangled state:
 \begin{equation}
+\input{figures_main/hypergraph-basic.tex}
 	|W_N\rangle = \frac{1}{\sqrt{N}}(|10\ldots 0\rangle + |01\ldots 0\rangle + \cdots + |00\ldots 1\rangle).
 \end{equation}
 
@@ -535,6 +431,7 @@ The ZW calculus thus provides a compositional framework where:
 	\item \textbf{W spiders} represent the fundamental multipartite entanglement resource.
 	\item \textbf{Composition rules} specify how these primitives combine to form more complex states.
 \end{itemize}
+\input{figures_main/ghz-hypergraph.tex}
 
 The ZW calculus has proven particularly valuable for:
 \begin{enumerate}
@@ -552,6 +449,7 @@ The interplay between Z and W spiders in the calculus mirrors the fundamental di
 
 This distinction is crucial in multipartite entanglement theory, as GHZ and W states represent inequivalent SLOCC classes for $N \geq 3$.
 
+\input{figures_main/lattice-hypergraph.tex}
 The ZW calculus extends naturally to the \textbf{ZW* calculus}, which includes additional generators for representing more complex multipartite structures. The calculus has been connected to:
 \begin{itemize}
 	\item \textbf{Tensor network states}: The diagrammatic representation connects naturally to tensor network notation.
@@ -562,11 +460,7 @@ The ZW calculus extends naturally to the \textbf{ZW* calculus}, which includes a
 The ZX and ZW calculi are not competing but complementary frameworks. The combined ZX-ZW calculus provides a complete toolkit for representing and reasoning about all aspects of multipartite quantum entanglement.
 
 
-\input{figures_main/zw-w-spider.tex}
 
-\input{figures_main/zw-ghz-vs-w.tex}
-
-\input{figures_main/zw-z-vs-w.tex}
 
 \section{Entanglement Classification and Measures}
 \label{sec:classification}
@@ -574,6 +468,7 @@ The ZX and ZW calculi are not competing but complementary frameworks. The combin
 Understanding entanglement requires both classification (distinguishing different types) and quantification (assigning numerical measures). Visualization methods play a crucial role in both aspects.
 
 \subsection{Entanglement Polytopes}
+\input{figures_main/tree-tensor-network.tex}
 \label{sec:polytopes}
 
 Entanglement polytopes provide a geometric framework for classifying multipartite entanglement by considering the set of possible local measurement statistics. The key idea is to characterize the "entanglement surface" through the possible values of local observables.
@@ -585,6 +480,7 @@ Given an $N$-partite quantum state, one can consider the vector of expectation v
 where $\{O_i\}$ are local observables (typically Pauli operators) on each subsystem. For pure states, the set of all possible vectors $\vec{v}$ forms a convex set whose extreme points correspond to product states.
 
 The \textbf{entanglement polytope} is the convex hull of all entanglement vectors achievable by states in a given SLOCC class. Different SLOCC classes correspond to different polytopes, and the position of a state's entanglement vector within its polytope indicates the type and amount of entanglement.
+\input{figures_main/zw-w-spider.tex}
 
 Key features of entanglement polytopes:
 \begin{enumerate}
@@ -593,6 +489,7 @@ Key features of entanglement polytopes:
 	\item \textbf{Testability}: The polytope can be characterized through a finite set of inequalities, making entanglement detection feasible experimentally.
 \end{enumerate}
 
+\input{figures_main/zx-bell-state.tex}
 For three qubits, the entanglement polytope is particularly simple: it consists of two tetrahedra corresponding to the GHZ and W SLOCC classes. The three-qubit tangle (a measure of genuine tripartite entanglement) can be related to the volume of the polytope region occupied by the state.
 
 The connection to the Bloch-Norm representation provides a geometric viewpoint where the three-qubit polytope consists of two tetrahedrons, allowing visualization of different entanglement classes and types through Bloch-norms.
@@ -606,15 +503,15 @@ The entanglement polytope approach connects to:
 
 The entanglement simplex provides a complementary viewpoint, where different SLOCC classes occupy distinct regions of a simplex. This connects to the concept of \textbf{entanglement hierarchy} in multipartite systems.
 
-\input{figures_main/entanglement-polytope-3qubit.tex}
 
-\input{figures_main/entanglement-polytope-position.tex}
+\input{figures_main/zw-ghz-vs-w.tex}
 
 \subsection{Entanglement Measures}
 \label{sec:measures}
 
 Several entanglement measures have visualizations associated with them:
 
+\input{figures_main/zx-spider-fusion.tex}
 \textbf{Negativity}: Based on the partial transpose, the negativity $N(\rho) = \frac{||\rho^{T_A}||_1 - 1}{2}$ can be visualized as the "volume" of negative eigenvalues in the partial transpose. For bipartite states, the logarithmic negativity $E_N = \log_2 ||\rho^{T_A}||_1$ provides an additive entanglement measure.
 
 \textbf{Concurrence}: For two qubits, the concurrence $C = \max(0, \lambda_1 - \lambda_2 - \lambda_3 - \lambda_4)$ can be visualized as the "length" of the longest chord in the ellipse of the reduced density matrix in the Bloch representation.
@@ -630,12 +527,15 @@ Recent work on \textbf{geometric measures of entanglement} provides visualizatio
 
 The work demonstrates that the area of a triangle formed by one-to-other entropies can measure three-qubit GME, with squared area proportional to the tangle. For four qubits, the four-qubit entropic fill relates to the hypervolume of a tetrahedron whose face areas are given by the one-to-other entropies.
 
+\input{figures_main/entanglement-polytope-3qubit.tex}
 The \textbf{entanglement distance} (ED) \cite{EntanglementDistance} provides a measure based on the Fubini-Study metric. For a state $|s\rangle$, the single-qubit ED is defined as:
 \begin{equation}
+\input{figures_main/zw-z-vs-w.tex}
 	E_\mu(|s\rangle) = 1 - \sum_{j=x,y,z} |\langle s|\sigma_j^\mu|s\rangle|^2,
 \end{equation}
 which ranges from 0 (pure product state) to 1 (maximally mixed). The total entanglement is the sum over all qubits. This measure has been applied to study entanglement in pseudo-graph states, showing that vertex degree distribution determines entanglement properties.
 
+\input{figures_main/zx-graph-state.tex}
 The entanglement distance approach reveals that:
 \begin{itemize}
 	\item Local connectivity of the underlying graph determines the entanglement.
@@ -643,7 +543,7 @@ The entanglement distance approach reveals that:
 	\item It depends only on the total degree of each vertex, not on the distinction between incoming and outgoing edges.
 \end{itemize}
 
-Recent work introduces graphical representations based on \textbf{minimal spanning graphs} that allow identification of genuine multipartite entanglement in hybrid quantum circuits. This approach provides a framework for understanding how measurements and unitary evolution work together to produce entanglement spreading.
+Recent work \cite{SpanningGraphs2025} introduces graphical representations based on \textbf{minimal spanning graphs} that allow identification of genuine multipartite entanglement in hybrid quantum circuits. This approach provides a framework for understanding how measurements and unitary evolution work together to produce entanglement spreading.
 
 The \textbf{tangle} has a clear geometric interpretation in the three-qubit case: $\tau = C_{A(BC)}^2 - C_{AB}^2 - C_{AC}^2$, which can be visualized as the "excess" entanglement beyond what can be explained by pairwise correlations. The relationship between tangle and the Bloch-norm allows deriving bounds that depend on the entanglement class.
 
@@ -654,11 +554,8 @@ For higher-partite systems, the \textbf{hierarchy of monogamy relations} provide
 which can be visualized as a triangle inequality where the "full" entanglement $C_{A(BC)}$ is the hypotenuse.
 
 
-\input{figures_main/negativity-visualization.tex}
+\input{figures_main/entanglement-polytope-position.tex}
 
-\input{figures_main/ckw-inequality.tex}
-
-\input{figures_main/triangle-measure.tex}
 
 \section{Specialized State Classes}
 \label{sec:specialized}
@@ -682,6 +579,7 @@ The Dicke basis provides an important representation for symmetric states. The $
 	|D_N^k\rangle = \frac{1}{\sqrt{\binom{N}{k}}} \sum_{\text{perm}} |i_1 i_2 \ldots i_N\rangle,
 \end{equation}
 where the sum is over all permutations with exactly $k$ ones.
+\input{figures_main/negativity-visualization.tex}
 
 The $k=1$ case gives the $W$ state: $|W_N\rangle = |D_N^1\rangle$. The $k=N/2$ case (for even $N$) gives the symmetric state with maximal total spin.
 
@@ -710,6 +608,7 @@ The geometric measure of entanglement for symmetric states can be computed by co
 Stabilizer formalism provides another tool for symmetric states: the Dicke states are stabilizer states with particular stabilizer groups. The representation of stabilizer states in the Dicke basis reveals interesting combinatorial properties.
 
 Symmetric states are also important in quantum optics and many-body physics, where they arise naturally as states of collective spin systems. The Holstein-Primakoff representation connects symmetric states to bosonic systems, enabling visualization through phase space methods.
+\input{figures_main/ckw-inequality.tex}
 
 Stabilizer states are a broad class of quantum states that can be characterized by their stabilizer groups. A stabilizer state $|\psi\rangle$ is uniquely defined by a set of $N$ commuting Pauli operators $\{g_1, \ldots, g_N\}$ such that $g_i |\psi\rangle = |\psi\rangle$ for all $i$. The stabilizer group $\mathcal{S} = \langle g_1, \ldots, g_N \rangle$ contains $2^N$ elements.
 
@@ -736,9 +635,10 @@ Stabilizer states have been classified up to local Clifford equivalence for smal
 The connection between stabilizer states and classical codes provides another visualization perspective:
 \begin{itemize}
 	\item \textbf{Graph codes}: Stabilizer codes can be represented by graphs, connecting error correction to entanglement.
-	\item \textbf{k-UNI states}: States with maximum entanglement across all bipartitions of size $k$ can be constructed from classical codes.
+	\item \textbf{k-UNI states}: States with maximum entanglement across all bipartitions of size $k$ can be constructed from classical codes \cite{Raissi2021}.
 	\item \textbf{AME states}: Absolutely maximally entangled states represent the strongest form of multipartite entanglement.
 \end{itemize}
+\input{figures_main/triangle-measure.tex}
 
 The study of \textbf{symmetries in stabilizer states} \cite{Englbrecht2020} reveals how the entanglement structure is related to the symmetry group. States with high symmetry often have special entanglement properties.
 
@@ -854,7 +754,7 @@ The relationship between entanglement and measurement-induced phase transitions 
 	\item The entanglement transition can be visualized through graph properties.
 \end{itemize}
 
-The work on \textbf{measurement-induced entanglement transitions} demonstrates how graphical methods can reveal the structure of entanglement in complex quantum dynamics.
+The work on \textbf{measurement-induced entanglement transitions} \cite{SpanningGraphs2025} demonstrates how graphical methods can reveal the structure of entanglement in complex quantum dynamics.
 
 Quantum machine learning provides new frontiers for entanglement visualization:
 \begin{itemize}
@@ -920,7 +820,3 @@ As quantum systems grow in size and complexity, visualization methods will becom
 
 \bibliography{main}% Produces the bibliography via BibTeX.
 
-\end{document}
-%
-% ****** End of file apssamp.tex ******
-)
