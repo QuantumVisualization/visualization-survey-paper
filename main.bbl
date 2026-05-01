@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (0) verbatim
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{15}%
+\begin{thebibliography}{17}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -201,6 +201,17 @@
   quantum many-body systems},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo
   {journal} {Nature Physics}\ }\textbf {\bibinfo {volume} {20}},\ \bibinfo
   {pages} {456--463}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huber}\ and\ \citenamefont
+  {Glaser}(2025)}]{huber2025beads}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Huber}, \bibfnamefont
+  {Dennis}}, and\ \bibinfo {author} {\bibfnamefont {Steffen~J.}\ \bibnamefont
+  {Glaser}}} (\bibinfo {year} {2025}),\ \bibfield  {title} {\enquote {\bibinfo
+  {title} {Beads: a canonical visualization of quantum states for applications
+  in quantum information processing},}\ }\href
+  {https://doi.org/10.1088/1367-2630/ae0514} {\bibfield  {journal} {\bibinfo
+  {journal} {New Journal of Physics}\ }\textbf {\bibinfo {volume} {27}},\
+  \bibinfo {pages} {094509}}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Majorana}(1932)}]{majorana1932atomi}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {Majorana},
@@ -220,4 +231,11 @@
   {journal} {\bibinfo  {journal} {IEEE VIS}\ ,\ \bibinfo {pages}
   {378--384}}}\Eprint {https://arxiv.org/abs/2105.12752} {2105.12752}
   \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Team}(2021)}]{Qiskit}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Team}, \bibfnamefont
+  {Qiskit}}} (\bibinfo {year} {2021}),\ \href@noop {} {\enquote {\bibinfo
+  {title} {Qiskit: An open-source framework for quantum computing},}\ }\Eprint
+  {https://arxiv.org/abs/2011.09293} {arXiv:2011.09293 [quant-ph]} \BibitemShut
+  {NoStop}%
 \end{thebibliography}%

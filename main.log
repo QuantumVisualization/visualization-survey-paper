@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.1)  29 APR 2026 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.1)  30 APR 2026 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -849,83 +849,147 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./main.toc)
+) (./main.toc
+Overfull \hbox (7.1112pt too wide) detected at line 10
+ \OT1/cmr/m/n/8 1.
+ []
+
+
+Overfull \hbox (7.1112pt too wide) detected at line 14
+ \OT1/cmr/m/n/8 1.
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+ [2]
 (./figures_main/circle-single-qubit.tex) (./figures_main/circle-two-qubit.tex)
-[3] (./figures_main/dcn-2qubit.tex) (./figures_main/dcn-3qubit.tex)
+[3] (./figures_main/dcn-2qubit.tex) [4] (./figures_main/dcn-3qubit.tex)
 (./figures_main/dcn-3qubit-ghz.tex
-<figures_main/dcn-3qubit-ghz.png, id=203, 433.62pt x 433.62pt>
+<figures_main/dcn-3qubit-ghz.png, id=239, 480.3546pt x 458.6736pt>
 File: figures_main/dcn-3qubit-ghz.png Graphic file (type png)
 <use figures_main/dcn-3qubit-ghz.png>
 Package pdftex.def Info: figures_main/dcn-3qubit-ghz.png  used on input line 3.
 
-(pdftex.def)             Requested size: 306.00311pt x 306.01973pt.
+(pdftex.def)             Requested size: 306.00311pt x 292.19232pt.
 ) (./figures_main/dcn-3qubit-w.tex
-<figures_main/dcn-3qubit-w.png, id=205, 433.62pt x 433.62pt>
+<figures_main/dcn-3qubit-w.png, id=241, 433.62pt x 433.62pt>
 File: figures_main/dcn-3qubit-w.png Graphic file (type png)
 <use figures_main/dcn-3qubit-w.png>
 Package pdftex.def Info: figures_main/dcn-3qubit-w.png  used on input line 3.
 (pdftex.def)             Requested size: 306.00311pt x 306.01973pt.
 )
 (./figures_main/dcn-3qubit-separable.tex
-<figures_main/dcn-3qubit-separable.png, id=206, 433.62pt x 433.62pt>
+<figures_main/dcn-3qubit-separable.png, id=242, 480.3546pt x 458.6736pt>
 File: figures_main/dcn-3qubit-separable.png Graphic file (type png)
 <use figures_main/dcn-3qubit-separable.png>
 Package pdftex.def Info: figures_main/dcn-3qubit-separable.png  used on input l
 ine 3.
-(pdftex.def)             Requested size: 306.00311pt x 306.01973pt.
-) [4] [5 <./figures_main/dcn-3qubit-ghz.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+(pdftex.def)             Requested size: 306.00311pt x 292.19232pt.
+) [5]
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 []|\OT1/cmr/m/n/9 Direct ge-o-met-ric in-tu-ition;
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 190--191
+Underfull \hbox (badness 6775) in paragraph at lines 206--207
 \OT1/cmr/m/n/9 phase and su-per-po-si-tion as
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 190--191
+Underfull \hbox (badness 1259) in paragraph at lines 206--207
 \OT1/cmr/m/n/9 an-gu-lar co-or-di-nates; com-pact
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--192
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
 []|\OT1/cmr/m/n/9 Multi-qubit ba-sis
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 194--195
+Underfull \hbox (badness 4072) in paragraph at lines 210--211
 []|\OT1/cmr/m/n/9 Dimensional ar-range-ment re-
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 196--197
+Underfull \hbox (badness 1107) in paragraph at lines 212--213
 []|\OT1/cmr/m/n/9 Geometric con-stel-la-tion of $\OML/cmm/m/it/9 N$
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 196--197
+Underfull \hbox (badness 1648) in paragraph at lines 212--213
 \OT1/cmr/m/n/9 points; clas-si-fi-ca-tion of sym-
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 196--197
+Underfull \hbox (badness 1902) in paragraph at lines 212--213
 \OT1/cmr/m/n/9 met-ric en-tan-gle-ment; nat-u-ral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 \OT1/cmr/m/n/9 con-nec-tion to stere-o-graphic
  []
 
-[6 <./figures_main/dcn-3qubit-w.png>] [7 <./figures_main/dcn-3qubit-separable.p
-ng>] (./figures_main/phase-space-torus.tex) [8]
-(./figures_main/wigner-function.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+[]|\OT1/cmr/m/n/9 Circuit de-bug-ging,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
+[]|\OT1/cmr/m/n/9 Multi-qubit re-duced
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 216--217
+[]|\OT1/cmr/m/n/9 Extends Bloch sphere to $\OML/cmm/m/it/9 N$
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 216--217
+\OT1/cmr/m/n/9 qubits; re-veals en-tan-gle-ment
+ []
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 216--217
+\OT1/cmr/m/n/9 monogamy; mixed-ness vis-i-ble
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+[]|\OT1/cmr/m/n/9 Measurement
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+[]|\OT1/cmr/m/n/9 Density ma-trix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
+[]|\OT1/cmr/m/n/9 Single-qubit Pauli
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[]|\OT1/cmr/m/n/9 Plots co-her-ence vec-tor per
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 222--223
+\OT1/cmr/m/n/9 qubit; vi-su-al-izes de-co-her-ence
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 224--224
+[]|\OT1/cmr/m/n/9 Education, out-reach,
+ []
+
+[6 <./figures_main/dcn-3qubit-ghz.png>] [7 <./figures_main/dcn-3qubit-w.png>]
+[8 <./figures_main/dcn-3qubit-separable.png>] [9]
+(./figures_main/phase-space-torus.tex) (./figures_main/wigner-function.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -951,46 +1015,74 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ) (./figures_main/poincare-sphere.tex) (./figures_main/hypertree.tex)
-(./figures_main/entanglement-landscape.tex) [9] [10]
+(./figures_main/entanglement-landscape.tex) [10] [11]
+Overfull \hbox (27.61287pt too wide) in paragraph at lines 336--337
+[]\OT1/cmr/m/n/10 Q Sphere is di-rectly ac-ces-si-ble via Qiskit's \OT1/cmtt/m/
+n/10 Statevector.draw("qsphere") \OT1/cmr/m/n/10 method or the stan-dalone \OT1
+/cmtt/m/n/10 plot[]state[]qsphere
+ []
+
+<figures_main/qsphere-bell.png, id=304, 404.712pt x 403.7484pt>
+File: figures_main/qsphere-bell.png Graphic file (type png)
+<use figures_main/qsphere-bell.png>
+Package pdftex.def Info: figures_main/qsphere-bell.png  used on input line 340.
+
+(pdftex.def)             Requested size: 229.49844pt x 228.95612pt.
+<figures_main/qsphere-ghz.png, id=305, 404.712pt x 403.7484pt>
+File: figures_main/qsphere-ghz.png Graphic file (type png)
+<use figures_main/qsphere-ghz.png>
+Package pdftex.def Info: figures_main/qsphere-ghz.png  used on input line 342.
+(pdftex.def)             Requested size: 229.49844pt x 228.95612pt.
+
+Overfull \hbox (60.86441pt too wide) in paragraph at lines 350--351
+[]\OT1/cmr/m/n/10 The Bloch Mul-ti-vec-tor vi-su-al-iza-tion, im-ple-mented in 
+Qiskit as \OT1/cmtt/m/n/10 plot[]state[]city \OT1/cmr/m/n/10 (also ac-ces-si-bl
+e via \OT1/cmtt/m/n/10 Statevector.draw("city")\OT1/cmr/m/n/10 ),
+ []
+
+[12] [13 <./figures_main/qsphere-bell.png> <./figures_main/qsphere-ghz.png>]
 (./figures_main/graph-state-construction.tex) (./figures_main/cluster-state.tex
-) (./figures_main/star-graph.tex) [11]
-(./figures_main/local-complementation.tex) [12]
+) (./figures_main/star-graph.tex) [14] [15]
+(./figures_main/local-complementation.tex)
 (./figures_main/stabilizer-generators.tex)
-(./figures_main/ghz-graph-equivalence.tex) [13] [14]
+(./figures_main/ghz-graph-equivalence.tex) [16] [17]
 (./figures_main/hypergraph-basic.tex) (./figures_main/ghz-hypergraph.tex)
 (./figures_main/lattice-hypergraph.tex)
-Underfull \hbox (badness 5022) in paragraph at lines 439--439
+Underfull \hbox (badness 5022) in paragraph at lines 554--554
 [][] \OT1/cmr/bx/n/9 Root $\OML/cmm/m/it/9 o$ 
  []
 
-[15] [16] [17] (./figures_main/zx-spiders.tex)
+[18] [19] [20] (./figures_main/zx-spiders.tex)
 (./figures_main/zx-bell-state.tex) (./figures_main/zx-spider-fusion.tex)
-(./figures_main/zx-graph-state.tex) [18] [19] (./figures_main/zw-w-spider.tex)
-(./figures_main/zw-ghz-vs-w.tex) (./figures_main/zw-z-vs-w.tex) [20]
-Overfull \hbox (5.17996pt too wide) in paragraph at lines 604--605
+(./figures_main/zx-graph-state.tex) [21] [22] (./figures_main/zw-w-spider.tex)
+(./figures_main/zw-ghz-vs-w.tex) (./figures_main/zw-z-vs-w.tex) [23] [24]
+Overfull \hbox (5.17996pt too wide) in paragraph at lines 719--720
 []\OT1/cmr/bx/n/10 Device-independent quan-tum cryp-tog-ra-phy\OT1/cmr/m/n/10 :
  The poly-tope frame-work pro-vides tools for device-independent
  []
 
 (./figures_main/entanglement-polytope-3qubit.tex)
-(./figures_main/entanglement-polytope-position.tex) [21] [22]
+(./figures_main/entanglement-polytope-position.tex) [25]
 (./figures_main/negativity-visualization.tex)
 (./figures_main/ckw-inequality.tex) (./figures_main/triangle-measure.tex)
-[23] [24] [25] [26] [27] [28] (./main.bbl
+[26] [27] [28] [29] [30] [31] (./main.bbl
 Underfull \hbox (badness 1859) in paragraph at lines 154--159
 []\OT1/cmr/m/n/9 Hadzihasanovic, Amar (2017a), ``The al-ge-bra of en-tan-gle-me
 nt and the ge-om-e-try of com-po-si-tion,'' arXiv preprint
  []
 
-) [29] (./main.aux (./macros.aux))
+[32]) [33] (./main.aux (./macros.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 055A77DE8F7C9794FF5C3FF72C8F7EB4;4287.
+(rerunfilecheck)             Checksum: 45CF10B4A10E5B867EBEC4788F5339A7;5338.
  ) 
 Here is how much of TeX's memory you used:
- 30324 strings out of 476091
- 583296 string characters out of 5794082
+ 30392 strings out of 476091
+ 584593 string characters out of 5794082
  1892330 words of memory out of 5000000
- 49987 multiletter control sequences out of 15000+600000
+ 50040 multiletter control sequences out of 15000+600000
  527820 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,12n,80p,1125b,1404s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1022,10 +1114,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-Output written on main.pdf (29 pages, 908337 bytes).
+Output written on main.pdf (33 pages, 834704 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
- 528 compressed objects within 6 object streams
- 163 named destinations out of 1000 (max. 500000)
- 236 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 691 PDF objects out of 1000 (max. 8388607)
+ 582 compressed objects within 6 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -134,6 +134,22 @@ The Circle Representation has several practical implementations. The Qiskit quan
 
 \input{figures_main/circle-two-qubit.tex}
 
+\subsubsection{Histogram Visualization}
+\label{sec:histogram}
+
+The Histogram visualization, implemented in Qiskit as \texttt{plot\_state\_histogram}, directly displays the probability distribution of measurement outcomes for a quantum state. For an $N$-qubit state $|\psi\rangle = \sum_{k} \alpha_k |k\rangle$, the histogram plots computational basis states $|k\rangle$ on the horizontal axis against their probabilities $P(k) = |\alpha_k|^2$ on the vertical axis.
+
+While primarily a measurement outcome visualization rather than a state-space visualization, it provides critical insight into entanglement when analyzing measurement statistics across different bases. For entangled states, the histogram reveals correlations that are absent in separable states. For example, measuring a Bell state $|\Phi^+\rangle$ in the computational basis yields only $|00\rangle$ and $|11\rangle$ with equal probability, while a separable state like $|++\rangle$ yields all four outcomes uniformly.
+
+The Qiskit implementation supports both statevectors and density matrices, with options for:
+\begin{itemize}
+	\item Customizable bar colors and figure sizes.
+	\item Sorting bars by probability or basis state ordering.
+	\item Exporting to image files for documentation and analysis.
+\end{itemize}
+
+This visualization is particularly valuable in circuit debugging and educational contexts, where understanding measurement probabilities is essential for verifying entanglement properties.
+
 There is a natural relationship between the Circle Representation and the Bloch sphere for single qubits. The Bloch sphere captures the state as a single point in 3D space, while the Circle Representation spreads the state across multiple circles, one per basis state. For single qubits, these representations are equivalent: the two circles can be mapped to the Bloch sphere coordinates $(\theta, \phi)$ through $r_0 = \cos(\theta/2)$ and $r_1 = \sin(\theta/2)$. The key advantage of the Circle Representation for multi-qubit systems is its scalability---while the Bloch sphere visualization requires projecting from a $4^N - 1$ dimensional space, the Circle Representation simply adds more circles.
 
 \subsection{Dimensional Circular Notation}
@@ -195,6 +211,18 @@ This representation has proven particularly valuable for educational purposes, a
 		\hline
 		Majorana Representation & $N$ points on sphere & Symmetric states & Geometric constellation of $N$ points; classification of symmetric entanglement; natural connection to stereographic projection \\
 		\hline
+		Q Sphere & Spherical plot & Circuit debugging, education & Point size = probability; color = phase; integrated with Qiskit; supports statevectors and density matrices \\
+		\hline
+		Bloch Multivector & $N$ Bloch spheres & Multi-qubit reduced states & Extends Bloch sphere to $N$ qubits; reveals entanglement monogamy; mixedness visible via sphere opacity \\
+		\hline
+		Histogram & Bar chart & Measurement probabilities & Direct probability display; identifies entanglement via measurement correlations; simple, intuitive for circuit debugging \\
+		\hline
+		Hinton & Grid of squares & Density matrix structure & Square size = magnitude; color = sign/phase; reveals coherence patterns; block structures indicate entanglement \\
+		\hline
+		Paulivec & $N$ Bloch spheres & Single-qubit Pauli expectations & Plots coherence vector per qubit; visualizes decoherence effects; integrates with Qiskit's quantum information toolkit \\
+		\hline
+		BEADS & $N$-qubit phase-space & Education, outreach, few-qubit visualization & Exact, bijective, general; interactive QuBeads tool; tiered simplification for non-specialists \\
+		\hline
 	\end{tabular}
 \end{table}
 
@@ -233,6 +261,20 @@ For a single qubit, the Bloch vector $\vec{r} = (\langle X \rangle, \langle Y \r
 One advantage of the coherence vector approach is its direct connection to measurable quantities---expectation values of Pauli operators. This makes it particularly suitable for experimental contexts where tomography is performed through Pauli measurements.
 
 However, the exponential growth of the representation space ($4^N - 1$ dimensions for $N$ qubits) limits practical visualization to small $N$. For $N = 2$, the 15-dimensional space can be projected onto lower-dimensional subspaces to reveal interesting features; for $N \geq 3$, numerical methods and dimensionality reduction become essential.
+
+\subsubsection{Paulivec Visualization}
+\label{sec:paulivec}
+
+The Paulivec visualization, implemented in Qiskit as \texttt{plot\_state\_paulivec}, maps the coherence vector of a quantum state to a collection of Bloch spheres. For an $N$-qubit state, each qubit's reduced density matrix $\rho_i$ is represented by a Bloch sphere, where the Bloch vector $\vec{r}_i = (\langle X_i \rangle, \langle Y_i \rangle, \langle Z_i \rangle)$ is plotted as a point on the sphere. The sphere's interior represents mixed states, with radius proportional to the purity $\text{Tr}(\rho_i^2)$.
+
+This visualization directly encodes the single-qubit Pauli expectation values that form the coherence vector, making it a natural companion to the Coherence Vector Representation. It is particularly useful for:
+\begin{itemize}
+	\item Visualizing single-qubit coherence in multipartite systems.
+	\item Identifying decoherence effects by observing deviations from the Bloch sphere surface.
+	\item Comparing qubit states across different parties in an entangled system.
+\end{itemize}
+
+The Qiskit implementation supports both statevectors and density matrices, with customizable color maps, figure sizes, and optional qubit labels. It integrates with Qiskit's quantum information toolkit, enabling direct visualization of simulation outputs.
 
 \subsection{Phase Space Methods}
 \label{sec:phase-space}
@@ -280,6 +322,79 @@ Continuous-variable (CV) quantum systems are characterized by observables with c
 \textbf{Gaussian vs. non-Gaussian states:} Gaussian states (coherent, squeezed, thermal) are fully characterized by their covariance matrix and can be efficiently manipulated in phase space. Non-Gaussian states, with their richer Wigner function structures, are essential for universal quantum computation but more challenging to characterize.
 
 The torus structure in Figure~\ref{fig:phase-space-torus} arises from periodic boundary conditions common in optical cavities and cyclic systems, where phase space becomes compact. This compact phase space provides a bridge between continuous-variable and discrete-variable representations of quantum states.
+
+\subsection{Q Sphere Visualization}
+\label{sec:qsphere}
+
+The Q Sphere is a spherical visualization of $N$-qubit quantum states implemented natively in the Qiskit quantum computing framework \cite{Qiskit} via the \texttt{plot\_state\_qsphere} function. It maps each computational basis state $|k\rangle$ of an $N$-qubit state to a point on the surface of a sphere:
+\begin{itemize}
+    \item \textbf{Point size}: Proportional to the probability $|\alpha_k|^2$ of measuring the basis state $|k\rangle$.
+    \item \textbf{Color}: Encodes the phase $\arg(\alpha_k)$ of the corresponding amplitude, using a colormap where blue represents phase 0, green $\pi/2$, red $\pi$, and yellow $3\pi/2$.
+    \item \textbf{Global phase anchor}: The basis state with the highest probability is set as the phase 0 reference, with all other phases calculated relative to this anchor.
+\end{itemize}
+
+Q Sphere is directly accessible via Qiskit's \texttt{Statevector.draw("qsphere")} method or the standalone \texttt{plot\_state\_qsphere} function. It supports customizable figure sizes, optional state labels, phase display in radians or degrees, and export to image files. While it does not explicitly visualize inter-qubit correlations beyond individual basis state amplitudes, its tight integration with Qiskit's circuit simulation and quantum information modules makes it a widely used tool for debugging small-scale quantum circuits and educational demonstrations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\linewidth]{figures_main/qsphere-bell.png}
+    \hfill
+    \includegraphics[width=0.45\linewidth]{figures_main/qsphere-ghz.png}
+    \caption{Left: Q Sphere visualization of the 2-qubit Bell state $|\Phi^+\rangle$. Right: Q Sphere visualization of the 3-qubit GHZ state $|\text{GHZ}_3\rangle$.}
+    \label{fig:qsphere-examples}
+\end{figure}
+
+\subsection{Bloch Multivector Visualization}
+\label{sec:bloch-multivector}
+
+The Bloch Multivector visualization, implemented in Qiskit as \texttt{plot\_state\_city} (also accessible via \texttt{Statevector.draw("city")}), extends the Bloch sphere representation to multipartite systems by displaying a Bloch sphere for each qubit's reduced state. For an $N$-qubit system, the visualization arranges $N$ Bloch spheres in a row or grid, each representing the reduced density matrix $\rho_i = \text{Tr}_{\bar{i}}(|\psi\rangle\langle\psi|)$ of qubit $i$.
+
+Each sphere encodes:
+\begin{itemize}
+	\item \textbf{Point position}: The Bloch vector $\vec{r}_i = (\langle X_i \rangle, \langle Y_i \rangle, \langle Z_i \rangle)$ for qubit $i$.
+	\item \textbf{Sphere opacity/fill}: Indicates the purity $\text{Tr}(\rho_i^2)$, with filled spheres representing pure reduced states and translucent spheres representing mixed states.
+\end{itemize}
+
+A key advantage of the Bloch Multivector for entanglement visualization is its ability to reveal \textbf{entanglement monogamy}: in entangled multipartite states, individual qubits are typically in mixed states (points inside spheres), while separable states have all qubits on their respective sphere surfaces. For example, in the Bell state $|\Phi^+\rangle$, both qubits have $\rho_i = I/2$ (center of the sphere), indicating maximal entanglement.
+
+The Qiskit implementation provides customization options including sphere size, color schemes, figure dimensions, and export capabilities. It supports both pure statevectors and density matrices, making it suitable for analyzing noisy quantum systems where decoherence plays a role.
+
+\subsection{Hinton Visualization}
+\label{sec:hinton}
+
+The Hinton visualization, implemented in Qiskit as \texttt{plot\_state\_hinton}, represents quantum states (either statevectors or density matrices) as a grid of squares where both size and color encode numerical values. For a density matrix $\rho$:
+\begin{itemize}
+	\item \textbf{Square area}: Proportional to the magnitude $|\rho_{ij}|$ of the matrix element.
+	\item \textbf{Square color}: Indicates the sign or phase of $\rho_{ij}$ (typically blue for positive real values, red for negative, with additional colors for complex phases).
+\end{itemize}
+
+For a statevector $|\psi\rangle = \sum_k \alpha_k |k\rangle$, the visualization shows $|\alpha_k|^2$ as squares, effectively displaying the probability distribution across computational basis states in a grid format.
+
+The Hinton plot is particularly valuable for:
+\begin{itemize}
+	\item Visualizing \textbf{density matrix structure}: Non-zero off-diagonal elements indicate quantum coherence between basis states.
+	\item Identifying \textbf{entanglement patterns}: Block diagonal structures in the density matrix can reveal bipartitions where the state has specific entanglement properties.
+	\item Analyzing \textbf{mixedness}: The distribution of diagonal elements shows how probability mass is distributed across basis states.
+\end{itemize}
+
+In the context of entanglement, the Hinton visualization of a reduced density matrix $\rho_A$ can reveal whether a subsystem is entangled: a maximally mixed reduced state (uniform diagonal, no off-diagonals) indicates maximal entanglement, while a pure reduced state (single dominant diagonal, possible off-diagonals) indicates separability.
+
+The Qiskit implementation supports both real and complex matrices, with customizable color maps for phase information, adjustable figure sizes, and integration with the broader Qiskit visualization ecosystem.
+
+\subsection{BEADS Representation}
+\label{sec:beads}
+
+The BEADS (Beads) representation, introduced by Huber and Glaser \cite{huber2025beads}, is a canonical, bijective, generalized phase-space visualization for arbitrary $N$-qubit pure states (mixed state support is under development). It extends the single-qubit Bloch sphere to multi-qubit systems by representing the state as a structured collection of "beads" (points) on coupled spheres, encoding both amplitude and phase information for all $2^N$ computational basis states.
+
+Key features of BEADS include:
+\begin{itemize}
+    \item \textbf{Exactness and generality}: The representation is informationally complete (exact, bijective mapping between quantum states and BEADS configurations) and applies to arbitrary $N$-qubit states, unlike symmetric-state-only methods such as the Majorana representation.
+    \item \textbf{Educational utility}: Adopted in quantum science curricula at Technical University of Munich and Ludwig Maximilian University of Munich, high-school workshops at the Max-Planck-Institute for Quantum Optics PhotonLab, and public outreach at the Deutsches Museum in Munich.
+    \item \textbf{Interactive tooling}: The open-source QuBeads software package provides interactive simulations of BEADS representations, supporting visualization of quantum gates, measurements, and protocols including Grover's algorithm and quantum teleportation for few-qubit systems.
+    \item \textbf{Tiered simplification}: Supports multiple levels of simplification for non-specialist audiences, retaining predictive power while avoiding the inaccuracies of metaphors like Schrödinger's cat.
+\end{itemize}
+
+BEADS occupies a unique niche among geometric methods: it is optimized for education and outreach, scales to larger systems given sufficient classical computational resources, and provides a unified framework for visualizing arbitrary multi-qubit states without the restrictions of symmetric-state-only or basis-amplitude-only representations.
 
 \section{Graph-Based Methods}
 \label{sec:graph}

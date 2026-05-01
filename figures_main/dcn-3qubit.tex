@@ -1,10 +1,24 @@
 \begin{figure}[htbp]
 	\centering
 	\begin{tikzpicture}[scale=1.1]
-		\def\ax{3.0}    % Q1 dimension (horizontal): 2cm circle + 1cm gap = 3cm
+		\def\ax{5.5}    % Q1 dimension (horizontal): increased for separability plane gap
 		\def\ay{3.0}  % Q2 dimension (vertical): 2cm circle + 1cm gap = 3cm
 		\def\sx{2.5}  % horizontal shift for back face (Q3=1)
 		\def\sy{2.0}  % vertical shift for back face (Q3=1)
+		
+		% Green separability plane: parallelogram parallel to side faces (Q1=0 and Q1=1)
+		% midway between left (Q1=0) and right (Q1=1) groups
+		\fill[green!20, opacity=0.4]
+			({\ax/2}, -0.5) --
+			({\ax/2}, {\ay+0.5}) --
+			({\ax/2+\sx}, {\ay+\sy+0.5}) --
+			({\ax/2+\sx}, {\sy-0.5}) -- cycle;
+		\draw[green!60!black, thick]
+			({\ax/2}, -0.5) --
+			({\ax/2}, {\ay+0.5}) --
+			({\ax/2+\sx}, {\ay+\sy+0.5}) --
+			({\ax/2+\sx}, {\sy-0.5}) -- cycle;
+		\node[green!60!black, font=\scriptsize] at ({\ax/2+\sx/2}, {(\ay+\sy)/2}) {separability};
 		
 		% Front face circles (Q3=0): solid, outer + inner (proportional sizes)
 		\foreach \x/\y/\label/\fill/\innerR in {0/0/000/blue!50/1.2, \ax/0/100/blue!50/0.8, 0/\ay/010/blue!50/1.0, \ax/\ay/110/blue!50/0.6} {
