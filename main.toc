@@ -11,24 +11,24 @@
 \contentsline {subsection}{\numberline {C}Dimensional Circular Notation}{4}{section*.9}%
 \contentsline {subsection}{\numberline {D}Majorana Representation}{6}{section*.10}%
 \contentsline {subsection}{\numberline {E}Coherence Vector Representation}{8}{section*.11}%
-\contentsline {subsubsection}{\numberline {1}Paulivec Visualization}{8}{section*.12}%
+\contentsline {subsubsection}{\numberline {1}Paulivec Visualization}{9}{section*.12}%
 \contentsline {subsection}{\numberline {F}Phase Space Methods}{9}{section*.13}%
 \contentsline {subsection}{\numberline {G}Phase Space Representation for Continuous-Variable Systems}{10}{section*.14}%
-\contentsline {subsection}{\numberline {H}Q Sphere Visualization}{12}{section*.15}%
+\contentsline {subsection}{\numberline {H}Q Sphere Visualization}{11}{section*.15}%
 \contentsline {subsection}{\numberline {I}Bloch Multivector Visualization}{12}{section*.16}%
 \contentsline {subsection}{\numberline {J}Hinton Visualization}{13}{section*.17}%
 \contentsline {subsection}{\numberline {K}BEADS Representation}{14}{section*.18}%
-\contentsline {section}{\numberline {III}Graph-Based Methods}{14}{section*.19}%
-\contentsline {subsection}{\numberline {A}Graph States}{14}{section*.20}%
-\contentsline {subsection}{\numberline {B}Entangled Graphs}{16}{section*.21}%
+\contentsline {section}{\numberline {III}Graph-Based Methods}{15}{section*.19}%
+\contentsline {subsection}{\numberline {A}Graph States}{15}{section*.20}%
+\contentsline {subsection}{\numberline {B}Entangled Graphs}{17}{section*.21}%
 \contentsline {subsection}{\numberline {C}Hypergraph Methods}{18}{section*.22}%
-\contentsline {section}{\numberline {IV}Algebraic and Categorical Methods}{19}{section*.23}%
+\contentsline {section}{\numberline {IV}Algebraic and Categorical Methods}{20}{section*.23}%
 \contentsline {subsection}{\numberline {A}ZX Calculus}{20}{section*.24}%
 \contentsline {subsection}{\numberline {B}ZW Calculus}{22}{section*.25}%
-\contentsline {section}{\numberline {V}Entanglement Classification and Measures}{23}{section*.26}%
-\contentsline {subsection}{\numberline {A}Entanglement Polytopes}{23}{section*.27}%
+\contentsline {section}{\numberline {V}Entanglement Classification and Measures}{24}{section*.26}%
+\contentsline {subsection}{\numberline {A}Entanglement Polytopes}{24}{section*.27}%
 \contentsline {subsection}{\numberline {B}Entanglement Measures}{25}{section*.28}%
-\contentsline {section}{\numberline {VI}Specialized State Classes}{26}{section*.29}%
-\contentsline {subsection}{\numberline {A}Symmetric States}{26}{section*.30}%
+\contentsline {section}{\numberline {VI}Specialized State Classes}{28}{section*.29}%
+\contentsline {subsection}{\numberline {A}Symmetric States}{28}{section*.30}%
 \contentsline {section}{\numberline {VII}Conclusion}{32}{section*.31}%
-\contentsline {section}{\numberline {}References}{32}{section*.32}%
+\contentsline {section}{\numberline {}References}{33}{section*.32}%

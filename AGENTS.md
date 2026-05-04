@@ -98,7 +98,7 @@ rm quantum-entanglement-visualization-survey.bak*
 ## Related Projects
 
 - **quantumviz/**: Implementation examples
-- **paper-scipost-physics-codebases/**: Case study reference
+- **quantumviz-paper/**: Case study reference
 
 ## Submission
 

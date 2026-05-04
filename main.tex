@@ -172,8 +172,6 @@ This dimensional arrangement is not merely a visual convenience---it directly en
 
 For three qubits, the DCN forms a three-dimensional cube structure with eight circles.
 
-\input{figures_main/dcn-3qubit.tex}
-
 Concrete examples of three-qubit states in DCN illustrate the representation's ability to distinguish different entanglement structures:
 
 \input{figures_main/dcn-3qubit-ghz.tex}
@@ -265,9 +263,20 @@ However, the exponential growth of the representation space ($4^N - 1$ dimension
 \subsubsection{Paulivec Visualization}
 \label{sec:paulivec}
 
-The Paulivec visualization, implemented in Qiskit as \texttt{plot\_state\_paulivec}, maps the coherence vector of a quantum state to a collection of Bloch spheres. For an $N$-qubit state, each qubit's reduced density matrix $\rho_i$ is represented by a Bloch sphere, where the Bloch vector $\vec{r}_i = (\langle X_i \rangle, \langle Y_i \rangle, \langle Z_i \rangle)$ is plotted as a point on the sphere. The sphere's interior represents mixed states, with radius proportional to the purity $\text{Tr}(\rho_i^2)$.
+The Paulivec visualization, implemented in Qiskit as \texttt{plot\_state\_paulivec}, displays Pauli operator expectation values as a \textbf{bar chart}. For an $N$-qubit state, the visualization shows $4^N$ bars (one for each Pauli term $\sigma \in \{I,X,Y,Z\}^{\otimes N}$).
+
+Each bar represents:
+\begin{itemize}
+	\item \textbf{X-axis}: Pauli term label (e.g., "II", "IX", "IY", ..., "ZZ" for 2 qubits)
+	\item \textbf{Y-axis}: Expectation value $\text{Tr}(\sigma\rho) \in [-1,1]$
+	\item \textbf{Bar height}: The Pauli expectation value
+\end{itemize}
+
+This visualization directly encodes the single-qubit Pauli expectation values that form the coherence vector, making it a natural companion to the Coherence Vector Representation.
 
 This visualization directly encodes the single-qubit Pauli expectation values that form the coherence vector, making it a natural companion to the Coherence Vector Representation. It is particularly useful for:
+
+\input{figures_main/paulivec-3qubit-ghz.tex}
 \begin{itemize}
 	\item Visualizing single-qubit coherence in multipartite systems.
 	\item Identifying decoherence effects by observing deviations from the Bloch sphere surface.
@@ -347,7 +356,7 @@ Q Sphere is directly accessible via Qiskit's \texttt{Statevector.draw("qsphere")
 \subsection{Bloch Multivector Visualization}
 \label{sec:bloch-multivector}
 
-The Bloch Multivector visualization, implemented in Qiskit as \texttt{plot\_state\_city} (also accessible via \texttt{Statevector.draw("city")}), extends the Bloch sphere representation to multipartite systems by displaying a Bloch sphere for each qubit's reduced state. For an $N$-qubit system, the visualization arranges $N$ Bloch spheres in a row or grid, each representing the reduced density matrix $\rho_i = \text{Tr}_{\bar{i}}(|\psi\rangle\langle\psi|)$ of qubit $i$.
+The Bloch Multivector visualization, implemented in Qiskit as \texttt{plot\_bloch\_multivector} (also accessible via \texttt{Statevector.draw("bloch")}), extends the Bloch sphere representation to multipartite systems by displaying a Bloch sphere for each qubit's reduced state. For an $N$-qubit system, the visualization arranges $N$ Bloch spheres in a row or grid, each representing the reduced density matrix $\rho_i = \text{Tr}_{\bar{i}}(|\psi\rangle\langle\psi|)$ of qubit $i$.
 
 Each sphere encodes:
 \begin{itemize}
@@ -358,6 +367,8 @@ Each sphere encodes:
 A key advantage of the Bloch Multivector for entanglement visualization is its ability to reveal \textbf{entanglement monogamy}: in entangled multipartite states, individual qubits are typically in mixed states (points inside spheres), while separable states have all qubits on their respective sphere surfaces. For example, in the Bell state $|\Phi^+\rangle$, both qubits have $\rho_i = I/2$ (center of the sphere), indicating maximal entanglement.
 
 The Qiskit implementation provides customization options including sphere size, color schemes, figure dimensions, and export capabilities. It supports both pure statevectors and density matrices, making it suitable for analyzing noisy quantum systems where decoherence plays a role.
+
+\input{figures_main/bloch-multivector-3qubit-ghz.tex}
 
 \subsection{Hinton Visualization}
 \label{sec:hinton}
@@ -378,6 +389,8 @@ The Hinton plot is particularly valuable for:
 \end{itemize}
 
 In the context of entanglement, the Hinton visualization of a reduced density matrix $\rho_A$ can reveal whether a subsystem is entangled: a maximally mixed reduced state (uniform diagonal, no off-diagonals) indicates maximal entanglement, while a pure reduced state (single dominant diagonal, possible off-diagonals) indicates separability.
+
+\input{figures_main/hinton-3qubit-ghz.tex}
 
 The Qiskit implementation supports both real and complex matrices, with customizable color maps for phase information, adjustable figure sizes, and integration with the broader Qiskit visualization ecosystem.
 
